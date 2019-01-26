@@ -160,8 +160,10 @@ def game():#main game
                   ad_drool = random.randint(1,10)
                   if cards_tbp <= 5:
                         print("Error! Cards selected is too low or not even. Returning to card selection...\n")
+                        game()
                   elif cards_tbp >= 29:
                         print("Error! Cards selected is too high or not even. Returning to card selection...\n")
+                        game()
                   elif cards_tbp == 6 or 8 or 10 or 12 or 14 or 16 or 18 or 20 or 22 or 24 or 26 or 28:
                         allocated_cards = []
                         player_cards = []
@@ -230,12 +232,80 @@ def game():#main game
                                     random_card = 'ad'
                               else:
                                     print("Unknown Error! Returing to card selection.")
-                              player_cards.append(random_card)
-                              allocated_cards.append(random_card)
-                        print(player_cards)
-                        print(allocated_cards)
+                              if random_card not in allocated_cards:
+								player_cards.append(random_card)
+								allocated_cards.append(random_card)
+                        print("Your cards are:")
+                        for cards in range(0, len(player_cards)):
+							if player_cards[cards] == 'a':
+								print("\n\tAnnie the Afgan Hound")
+							elif player_cards[cards] == 'b':
+								print("\n\tBertie the Boxer")
+							elif player_cards[cards] == 'c':
+								print("\n\tBetty the Borzoi")
+							elif player_cards[cards] == 'd':
+								print("\n\tCharlie the Chihuahua")
+							elif player_cards[cards] == 'e':
+								print("\n\tChaz the Cockerspaniel")
+							elif player_cards[cards] == 'f':
+								print("\n\tDonald the Dalmation")
+							elif player_cards[cards] == 'g':
+								print("\n\tAlfie the Affenpinscher")
+							elif player_cards[cards] == 'h':
+								print("\n\tAlbert the Alaskan Klee Kai")
+							elif player_cards[cards] == 'i':
+								print("\n\tBernie the Black and Tan Coonhound")
+							elif player_cards[cards] == 'j':
+								print("\n\tChloe the Chinese Shar-Pei")
+							elif player_cards[cards] == 'k':
+								print("\n\tElizabeth the English Toy Spaniel")
+							elif player_cards[cards] == 'l':
+								print("\n\tJake the Japanese Chin")
+							elif player_cards[cards] == 'm':
+								print("\n\tKaty the Korean Jindo Dog")
+							elif player_cards[cards] == 'n':
+								print("\n\tKaapro the Kooikerhondje")
+							elif player_cards[cards] == 'o':
+								print("\n\tKa the Komondor")
+							elif player_cards[cards] == 'p':
+								print("\n\tMatt the Mutt")
+							elif player_cards[cards] == 'q':
+								print("\n\tNancy the Norfolk Terrier")
+							elif player_cards[cards] == 'r':
+								print("\n\tNoelle the Norwich Terrier")
+							elif player_cards[cards] == 's':
+								print("\n\tNatasha the Nova Scotia Tolling Retriever")
+							elif player_cards[cards] == 't':
+								print("\n\tStacy the Staffordshire Bull Terrier")
+							elif player_cards[cards] == 'u':
+								print("\n\tBrenda the Bull Dog")
+							elif player_cards[cards] == 'v':
+								print("\n\tDarcy the Dogo Argentino")
+							elif player_cards[cards] == 'w':
+								print("\n\tGlenda the German Shorthaired Pointer")
+							elif player_cards[cards] == 'x':
+								print("\n\tHerbet the Havanese")
+							elif player_cards[cards] == 'y':
+								print("\n\tPeter the Pekingese")
+							elif player_cards[cards] == 'z':
+								print("\n\tPerkie the Plott")
+							elif player_cards[cards] == 'aa':
+								print("\n\tPoppy the Puli")
+							elif player_cards[cards] == 'ab':
+								print("\n\tXenophon the Xoloitzcuintli")
+							elif player_cards[cards] == 'ac':
+								print("\n\tYork the Yorkipoo")
+							elif player_cards[cards] == 'ad':
+								print("\n\tSan the Samoyed")
+							else:
+								print("Error! Retruning to card selection")
+								game()
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
-
+                        game()
+      else:
+		  print("Error with selected number of cards. Returning to card selection.")
+		  game()
+		  
 menu()#start the menu function
