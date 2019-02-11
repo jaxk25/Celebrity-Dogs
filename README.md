@@ -1,4 +1,4 @@
-# Celebrity Dogs in Python
+![Celebrity Dogs Animated Title](https://github.com/jaxk25/Celebrity-Dogs/blob/master/8hd074el.gif)
 Python Game based on the AQA GCSE Computer Science 2019 Exam Task.  
 To run, make sure you have Python (2 or 3).  
 ### To run in Linux
