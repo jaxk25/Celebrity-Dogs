@@ -2,7 +2,7 @@
 Python Game based on the AQA GCSE Computer Science 2019 Exam Task.  
 To run, make sure you have Python (2 or 3).  
 ### To run in Linux
-In the Command Line, type `python celecbrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`  
+In the Command Line, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`  
 ### To run in Windows
 In the Command Prompt, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`
 ### To run on Mac
