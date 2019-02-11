@@ -38,7 +38,7 @@ def game():#main game
             if f.mode == 'r': #if opened correctly in read mode, do
                   contents = f.read() #set contents value to what is in the dogs.txt file
                   a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,ab,ac,ad = contents.split("', '")#split contents into separate variables where there is a "', '"
-                  a_exercise = random.randint(1,5)
+                  a_exercise = random.randint(1,5) #randomly select variables
                   b_exercise = random.randint(1,5)
                   c_exercise = random.randint(1,5)
                   d_exercise = random.randint(1,5)
@@ -158,7 +158,7 @@ def game():#main game
                   ab_drool = random.randint(1,10)
                   ac_drool = random.randint(1,10)
                   ad_drool = random.randint(1,10)
-                  if cards_tbp <= 5:
+                  if cards_tbp <= 5: #check if number of cards is valid
                         print("Error! Cards selected is too low or not even. Returning to card selection...\n")
                         game()
                   elif cards_tbp >= 29:
@@ -168,8 +168,141 @@ def game():#main game
                         allocated_cards = []
                         player_cards = []
                         computer_cards = []
-                        for i in range(0,cards_tbp/2):
-                              random_card = random.randint(1,30)
+                        while len(player_cards) != (cards_tbp/2): #while the player has less than half of all cards played this game, do
+                              random_card = random.randint(1,30) #select a random card
+                              if random_card == 1: #decide what card it is
+                                    random_card = 'a'
+                              elif random_card == 2:
+                                    random_card = 'b'
+                              elif random_card == 3:
+                                    random_card = 'c'
+                              elif random_card == 4:
+                                    random_card = 'd'
+                              elif random_card == 5:
+                                    random_card = 'e'
+                              elif random_card == 6:
+                                    random_card = 'f'
+                              elif random_card == 7:
+                                    random_card = 'g'
+                              elif random_card == 8:
+                                    random_card = 'h'
+                              elif random_card == 9:
+                                    random_card = 'i'
+                              elif random_card == 10:
+                                    random_card = 'j'
+                              elif random_card == 11:
+                                    random_card = 'k'
+                              elif random_card == 12:
+                                    random_card = 'l'
+                              elif random_card == 13:
+                                    random_card = 'm'
+                              elif random_card == 14:
+                                    random_card = 'n'
+                              elif random_card == 15:
+                                    random_card = 'o'
+                              elif random_card == 16:
+                                    random_card = 'p'
+                              elif random_card == 17:
+                                    random_card = 'q'
+                              elif random_card == 18:
+                                    random_card = 'r'
+                              elif random_card == 19:
+                                    random_card = 's'
+                              elif random_card == 20:
+                                    random_card = 't'
+                              elif random_card == 21:
+                                    random_card = 'u'
+                              elif random_card == 22:
+                                    random_card = 'v'
+                              elif random_card == 23:
+                                    random_card = 'w'
+                              elif random_card == 24:
+                                    random_card = 'x'
+                              elif random_card == 25:
+                                    random_card = 'y'
+                              elif random_card == 26:
+                                    random_card = 'z'
+                              elif random_card == 27:
+                                    random_card = 'aa'
+                              elif random_card == 28:
+                                    random_card = 'ab'
+                              elif random_card == 29:
+                                    random_card = 'ac'
+                              elif random_card == 30:
+                                    random_card = 'ad'
+                              else: #if number is more than 30, return error, there is only 30 cards
+                                    print("Unknown Error! Returing to card selection.")
+                              if random_card not in allocated_cards: #if the random card is not already being used, do
+                                    player_cards.append(random_card) #give to player
+                                    allocated_cards.append(random_card) #set as already being used
+                        print("Your cards are:")#tell the player what cards they have
+                        for cards in range(0, len(player_cards)): #repeat for the amount of cards that the player has
+                              if player_cards[cards] == 'a': #tell the player the name of the cards they have
+                                    print("\n\tAnnie the Afgan Hound")
+                              elif player_cards[cards] == 'b':
+                                    print("\n\tBertie the Boxer")
+                              elif player_cards[cards] == 'c':
+                                    print("\n\tBetty the Borzoi")
+                              elif player_cards[cards] == 'd':
+                                    print("\n\tCharlie the Chihuahua")
+                              elif player_cards[cards] == 'e':
+                                    print("\n\tChaz the Cockerspaniel")
+                              elif player_cards[cards] == 'f':
+                                    print("\n\tDonald the Dalmation")
+                              elif player_cards[cards] == 'g':
+                                    print("\n\tAlfie the Affenpinscher")
+                              elif player_cards[cards] == 'h':
+                                    print("\n\tAlbert the Alaskan Klee Kai")
+                              elif player_cards[cards] == 'i':
+                                    print("\n\tBernie the Black and Tan Coonhound")
+                              elif player_cards[cards] == 'j':
+                                    print("\n\tChloe the Chinese Shar-Pei")
+                              elif player_cards[cards] == 'k':
+                                    print("\n\tElizabeth the English Toy Spaniel")
+                              elif player_cards[cards] == 'l':
+                                    print("\n\tJake the Japanese Chin")
+                              elif player_cards[cards] == 'm':
+                                    print("\n\tKaty the Korean Jindo Dog")
+                              elif player_cards[cards] == 'n':
+                                    print("\n\tKaapro the Kooikerhondje")
+                              elif player_cards[cards] == 'o':
+                                    print("\n\tKa the Komondor")
+                              elif player_cards[cards] == 'p':
+                                    print("\n\tMatt the Mutt")
+                              elif player_cards[cards] == 'q':
+                                    print("\n\tNancy the Norfolk Terrier")
+                              elif player_cards[cards] == 'r':
+                                    print("\n\tNoelle the Norwich Terrier")
+                              elif player_cards[cards] == 's':
+                                    print("\n\tNatasha the Nova Scotia Tolling Retriever")
+                              elif player_cards[cards] == 't':
+                                    print("\n\tStacy the Staffordshire Bull Terrier")
+                              elif player_cards[cards] == 'u':
+                                    print("\n\tBrenda the Bull Dog")
+                              elif player_cards[cards] == 'v':
+                                    print("\n\tDarcy the Dogo Argentino")
+                              elif player_cards[cards] == 'w':
+                                    print("\n\tGlenda the German Shorthaired Pointer")
+                              elif player_cards[cards] == 'x':
+                                    print("\n\tHerbet the Havanese")
+                              elif player_cards[cards] == 'y':
+                                    print("\n\tPeter the Pekingese")
+                              elif player_cards[cards] == 'z':
+                                    print("\n\tPerkie the Plott")
+                              elif player_cards[cards] == 'aa':
+                                    print("\n\tPoppy the Puli")
+                              elif player_cards[cards] == 'ab':
+                                    print("\n\tXenophon the Xoloitzcuintli")
+                              elif player_cards[cards] == 'ac':
+                                    print("\n\tYork the Yorkipoo")
+                              elif player_cards[cards] == 'ad':
+                                    print("\n\tSan the Samoyed")
+                              else:
+                                    print("Error! Retruning to card selection")
+                                    game()
+                        print("\n")
+                        while len(computer_cards) != (cards_tbp/2): #while the computer has less cards than half the amount of cards being played this game, do
+                              random_card = random.randint(1,30) #select a random card
                               if random_card == 1:
                                     random_card = 'a'
                               elif random_card == 2:
@@ -230,82 +363,197 @@ def game():#main game
                                     random_card = 'ac'
                               elif random_card == 30:
                                     random_card = 'ad'
-                              else:
+                              else: #if the number is >30, return error, there is only 30 cards
                                     print("Unknown Error! Returing to card selection.")
-                              if random_card not in allocated_cards:
-								player_cards.append(random_card)
-								allocated_cards.append(random_card)
-                        print("Your cards are:")
-                        for cards in range(0, len(player_cards)):
-							if player_cards[cards] == 'a':
-								print("\n\tAnnie the Afgan Hound")
-							elif player_cards[cards] == 'b':
-								print("\n\tBertie the Boxer")
-							elif player_cards[cards] == 'c':
-								print("\n\tBetty the Borzoi")
-							elif player_cards[cards] == 'd':
-								print("\n\tCharlie the Chihuahua")
-							elif player_cards[cards] == 'e':
-								print("\n\tChaz the Cockerspaniel")
-							elif player_cards[cards] == 'f':
-								print("\n\tDonald the Dalmation")
-							elif player_cards[cards] == 'g':
-								print("\n\tAlfie the Affenpinscher")
-							elif player_cards[cards] == 'h':
-								print("\n\tAlbert the Alaskan Klee Kai")
-							elif player_cards[cards] == 'i':
-								print("\n\tBernie the Black and Tan Coonhound")
-							elif player_cards[cards] == 'j':
-								print("\n\tChloe the Chinese Shar-Pei")
-							elif player_cards[cards] == 'k':
-								print("\n\tElizabeth the English Toy Spaniel")
-							elif player_cards[cards] == 'l':
-								print("\n\tJake the Japanese Chin")
-							elif player_cards[cards] == 'm':
-								print("\n\tKaty the Korean Jindo Dog")
-							elif player_cards[cards] == 'n':
-								print("\n\tKaapro the Kooikerhondje")
-							elif player_cards[cards] == 'o':
-								print("\n\tKa the Komondor")
-							elif player_cards[cards] == 'p':
-								print("\n\tMatt the Mutt")
-							elif player_cards[cards] == 'q':
-								print("\n\tNancy the Norfolk Terrier")
-							elif player_cards[cards] == 'r':
-								print("\n\tNoelle the Norwich Terrier")
-							elif player_cards[cards] == 's':
-								print("\n\tNatasha the Nova Scotia Tolling Retriever")
-							elif player_cards[cards] == 't':
-								print("\n\tStacy the Staffordshire Bull Terrier")
-							elif player_cards[cards] == 'u':
-								print("\n\tBrenda the Bull Dog")
-							elif player_cards[cards] == 'v':
-								print("\n\tDarcy the Dogo Argentino")
-							elif player_cards[cards] == 'w':
-								print("\n\tGlenda the German Shorthaired Pointer")
-							elif player_cards[cards] == 'x':
-								print("\n\tHerbet the Havanese")
-							elif player_cards[cards] == 'y':
-								print("\n\tPeter the Pekingese")
-							elif player_cards[cards] == 'z':
-								print("\n\tPerkie the Plott")
-							elif player_cards[cards] == 'aa':
-								print("\n\tPoppy the Puli")
-							elif player_cards[cards] == 'ab':
-								print("\n\tXenophon the Xoloitzcuintli")
-							elif player_cards[cards] == 'ac':
-								print("\n\tYork the Yorkipoo")
-							elif player_cards[cards] == 'ad':
-								print("\n\tSan the Samoyed")
-							else:
-								print("Error! Retruning to card selection")
-								game()
-                                    
+                              if random_card not in allocated_cards: #if the card if not already being used, do
+                                    computer_cards.append(random_card) #give card to computer
+                                    allocated_cards.append(random_card) #set card as being used.
+                        print("Your card is:")#tell the player what their first card is.
+                        if player_cards[cards] == 'a':#if card == __ , do
+                              print("\nAnnie the Afgan Hound")#print name
+                              print("Intelligence =\t" +str(a_intelligence))#print intelligence
+                              print("Exercise =\t" +str(a_exercise))#print exercise
+                              print("Friendliness =\t" +str(a_friendliness))#print friendliness
+                              print("Drool =\t" +str(a_drool)) #print drool, do all this for other cards, up to 'ad'
+                        elif player_cards[cards] == 'b':
+                              print("\nBertie the Boxer")
+                              print("Intelligence =\t" +str(b_intelligence))
+                              print("Exercise =\t" +str(b_exercise))
+                              print("Friendliness =\t" +str(b_friendliness))
+                              print("Drool =\t" +str(b_drool))
+                        elif player_cards[cards] == 'c':
+                              print("\nBetty the Borzoi")
+                              print("Intelligence =\t" +str(c_intelligence))
+                              print("Exercise =\t" +str(c_exercise))
+                              print("Friendliness =\t" +str(c_friendliness))
+                              print("Drool =\t" +str(c_drool))
+                        elif player_cards[cards] == 'd':
+                              print("\nCharlie the Chihuahua")
+                              print("Intelligence =\t" +str(d_intelligence))
+                              print("Exercise =\t" +str(d_exercise))
+                              print("Friendliness =\t" +str(d_friendliness))
+                              print("Drool =\t" +str(d_drool))
+                        elif player_cards[cards] == 'e':
+                              print("\nChaz the Cockerspaniel")
+                              print("Intelligence =\t" +str(e_intelligence))
+                              print("Exercise =\t" +str(e_exercise))
+                              print("Friendliness =\t" +str(e_friendliness))
+                              print("Drool =\t" +str(e_drool))
+                        elif player_cards[cards] == 'f':
+                              print("\nDonald the Dalmation")
+                              print("Intelligence =\t" +str(f_intelligence))
+                              print("Exercise =\t" +str(f_exercise))
+                              print("Friendliness =\t" +str(f_friendliness))
+                              print("Drool =\t" +str(f_drool))
+                        elif player_cards[cards] == 'g':
+                              print("\nAlfie the Affenpinscher")
+                              print("Intelligence =\t" +str(g_intelligence))
+                              print("Exercise =\t" +str(g_exercise))
+                              print("Friendliness =\t" +str(g_friendliness))
+                              print("Drool =\t" +str(g_drool))
+                        elif player_cards[cards] == 'h':
+                              print("\nAlbert the Alaskan Klee Kai")
+                              print("Intelligence =\t" +str(h_intelligence))
+                              print("Exercise =\t" +str(h_exercise))
+                              print("Friendliness =\t" +str(h_friendliness))
+                              print("Drool =\t" +str(h_drool))
+                        elif player_cards[cards] == 'i':
+                              print("\nBernie the Black and Tan Coonhound")
+                              print("Intelligence =\t" +str(i_intelligence))
+                              print("Exercise =\t" +str(i_exercise))
+                              print("Friendliness =\t" +str(i_friendliness))
+                              print("Drool =\t" +str(i_drool))
+                        elif player_cards[cards] == 'j':
+                              print("\nChloe the Chinese Shar-Pei")
+                              print("Intelligence =\t" +str(j_intelligence))
+                              print("Exercise =\t" +str(j_exercise))
+                              print("Friendliness =\t" +str(j_friendliness))
+                              print("Drool =\t" +str(j_drool))
+                        elif player_cards[cards] == 'k':
+                              print("\nElizabeth the English Toy Spaniel")
+                              print("Intelligence =\t" +str(k_intelligence))
+                              print("Exercise =\t" +str(k_exercise))
+                              print("Friendliness =\t" +str(k_friendliness))
+                              print("Drool =\t" +str(k_drool))
+                        elif player_cards[cards] == 'l':
+                              print("\nJake the Japanese Chin")
+                              print("Intelligence =\t" +str(l_intelligence))
+                              print("Exercise =\t" +str(l_exercise))
+                              print("Friendliness =\t" +str(l_friendliness))
+                              print("Drool =\t" +str(l_drool))
+                        elif player_cards[cards] == 'm':
+                              print("\nKaty the Korean Jindo Dog")
+                              print("Intelligence =\t" +str(m_intelligence))
+                              print("Exercise =\t" +str(m_exercise))
+                              print("Friendliness =\t" +str(m_friendliness))
+                              print("Drool =\t" +str(m_drool))
+                        elif player_cards[cards] == 'n':
+                              print("\nKaapro the Kooikerhondje")
+                              print("Intelligence =\t" +str(n_intelligence))
+                              print("Exercise =\t" +str(n_exercise))
+                              print("Friendliness =\t" +str(n_friendliness))
+                              print("Drool =\t" +str(n_drool))
+                        elif player_cards[cards] == 'o':
+                              print("\nKa the Komondor")
+                              print("Intelligence =\t" +str(o_intelligence))
+                              print("Exercise =\t" +str(o_exercise))
+                              print("Friendliness =\t" +str(o_friendliness))
+                              print("Drool =\t" +str(o_drool))
+                        elif player_cards[cards] == 'p':
+                              print("\nMatt the Mutt")
+                              print("Intelligence =\t" +str(p_intelligence))
+                              print("Exercise =\t" +str(p_exercise))
+                              print("Friendliness =\t" +str(p_friendliness))
+                              print("Drool =\t" +str(p_drool))
+                        elif player_cards[cards] == 'q':
+                              print("\nNancy the Norfolk Terrier")
+                              print("Intelligence =\t" +str(q_intelligence))
+                              print("Exercise =\t" +str(q_exercise))
+                              print("Friendliness =\t" +str(q_friendliness))
+                              print("Drool =\t" +str(q_drool))
+                        elif player_cards[cards] == 'r':
+                              print("\nNoelle the Norwich Terrier")
+                              print("Intelligence =\t" +str(r_intelligence))
+                              print("Exercise =\t" +str(r_exercise))
+                              print("Friendliness =\t" +str(r_friendliness))
+                              print("Drool =\t" +str(r_drool))
+                        elif player_cards[cards] == 's':
+                              print("\nNatasha the Nova Scotia Tolling Retriever")
+                              print("Intelligence =\t" +str(s_intelligence))
+                              print("Exercise =\t" +str(s_exercise))
+                              print("Friendliness =\t" +str(s_friendliness))
+                              print("Drool =\t" +str(s_drool))
+                        elif player_cards[cards] == 't':
+                              print("\nStacy the Staffordshire Bull Terrier")
+                              print("Intelligence =\t" +str(t_intelligence))
+                              print("Exercise =\t" +str(t_exercise))
+                              print("Friendliness =\t" +str(t_friendliness))
+                              print("Drool =\t" +str(t_drool))
+                        elif player_cards[cards] == 'u':
+                              print("\nBrenda the Bull Dog")
+                              print("Intelligence =\t" +str(u_intelligence))
+                              print("Exercise =\t" +str(u_exercise))
+                              print("Friendliness =\t" +str(u_friendliness))
+                              print("Drool =\t" +str(u_drool))
+                        elif player_cards[cards] == 'v':
+                              print("\nDarcy the Dogo Argentino")
+                              print("Intelligence =\t" +str(v_intelligence))
+                              print("Exercise =\t" +str(v_exercise))
+                              print("Friendliness =\t" +str(v_friendliness))
+                              print("Drool =\t" +str(v_drool))
+                        elif player_cards[cards] == 'w':
+                              print("\nGlenda the German Shorthaired Pointer")
+                              print("Intelligence =\t" +str(w_intelligence))
+                              print("Exercise =\t" +str(w_exercise))
+                              print("Friendliness =\t" +str(w_friendliness))
+                              print("Drool =\t" +str(w_drool))
+                        elif player_cards[cards] == 'x':
+                              print("\nHerbet the Havanese")
+                              print("Intelligence =\t" +str(x_intelligence))
+                              print("Exercise =\t" +str(x_exercise))
+                              print("Friendliness =\t" +str(x_friendliness))
+                              print("Drool =\t" +str(x_drool))
+                        elif player_cards[cards] == 'y':
+                              print("\Peter the Pekingese")
+                              print("Intelligence =\t" +str(y_intelligence))
+                              print("Exercise =\t" +str(y_exercise))
+                              print("Friendliness =\t" +str(y_friendliness))
+                              print("Drool =\t" +str(y_drool))
+                        elif player_cards[cards] == 'z':
+                              print("\nPerkie the Plott")
+                              print("Intelligence =\t" +str(z_intelligence))
+                              print("Exercise =\t" +str(z_exercise))
+                              print("Friendliness =\t" +str(z_friendliness))
+                              print("Drool =\t" +str(z_drool))
+                        elif player_cards[cards] == 'aa':
+                              print("\nPoppy the Puli")
+                              print("Intelligence =\t" +str(aa_intelligence))
+                              print("Exercise =\t" +str(aa_exercise))
+                              print("Friendliness =\t" +str(aa_friendliness))
+                              print("Drool =\t" +str(aa_drool))
+                        elif player_cards[cards] == 'ab':
+                              print("\nXenophon the Xoloitzcuintli")
+                              print("Intelligence =\t" +str(ab_intelligence))
+                              print("Exercise =\t" +str(ab_exercise))
+                              print("Friendliness =\t" +str(ab_friendliness))
+                              print("Drool =\t" +str(ab_drool))
+                        elif player_cards[cards] == 'ac':
+                              print("\nYork the Yorkipoo")
+                              print("Intelligence =\t" +str(ac_intelligence))
+                              print("Exercise =\t" +str(ac_exercise))
+                              print("Friendliness =\t" +str(ac_friendliness))
+                              print("Drool =\t" +str(ac_drool))
+                        elif player_cards[cards] == 'ad':
+                              print("\nSan the Samoyed")
+                              print("Intelligence =\t" +str(ad_intelligence))
+                              print("Exercise =\t" +str(ad_exercise))
+                              print("Friendliness =\t" +str(ad_friendliness))
+                              print("Drool =\t" +str(ad_drool))
                   else:
                         print("Unknown Error! Retrurning to card selection.")
-                        game()
+                        game()#return to card selection
       else:
-		  print("Error with selected number of cards. Returning to card selection.")
-		  game()
-		  
+              print("Error with selected number of cards. Returning to card selection.")
+              game()#return to card selection
+              
 menu()#start the menu function
