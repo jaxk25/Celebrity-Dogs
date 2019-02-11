@@ -6,6 +6,8 @@ In the Command Line, type `python celebrity\ dogs\ game.py` or `python3 celebrit
 ### To run in Windows
 In the Command Prompt, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`
 ### To run on Mac
-In the Terminal, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`  
+In the Terminal, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py` 
+# Download Celebrity Dogs
+To download Celebrity Dogs, click [Here](https://github.com/jaxk25/Celebrity-Dogs.git)
 ## [PYTHON 2 SUPPORT](https://github.com/jaxk25/Celebrity-Dogs-Python/wiki/How-to-run#note)  
 ## [How to play](https://github.com/jaxk25/Celebrity-Dogs-Python/wiki/How-to-play)  
