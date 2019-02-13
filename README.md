@@ -10,7 +10,7 @@ In the Terminal, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ d
 # Download Celebrity Dogs
 To download Celebrity Dogs, click [Here](https://github.com/jaxk25/Celebrity-Dogs/releases/tag/V0.1%CE%B1) 
 ## How to play
-To find out how to play, click [Here](https://github.com/jaxk25/Celebrity-Dogs-Python/wiki/How-to-play)  
+To find out how to play, click [Here](https://github.com/jaxk25/Celebrity-Dogs/wiki/How-to-play)  
 ## Celebrity Dogs can now be played on mobile!
 ### iOS
 To play in iOS, copy and paste the `celebrity dogs game.py` and `dogs.txt` into [Python2IDE](https://itunes.apple.com/gb/app/python2ide/id984990674?mt=8) (MAKE SURE TO NAME YOUR FILES CORRECTLY!!).  
