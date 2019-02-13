@@ -8,7 +8,7 @@ In the Command Prompt, type `python celebrity\ dogs\ game.py` or `python3 celebr
 ### To run on Mac
 In the Terminal, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py` 
 # Download Celebrity Dogs
-To download Celebrity Dogs, click [Here](https://github.com/jaxk25/Celebrity-Dogs.git) 
+To download Celebrity Dogs, click [Here](https://github.com/jaxk25/Celebrity-Dogs/releases) 
 ## [How to play](https://github.com/jaxk25/Celebrity-Dogs-Python/wiki/How-to-play)  
 ## Celebrity Dogs can now be played on mobile!
 ### iOS
