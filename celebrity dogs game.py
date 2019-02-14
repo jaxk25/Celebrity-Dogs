@@ -579,9 +579,21 @@ def game():#main game
                               print("Exercise =\t" +str(ad_exercise))
                               print("Friendliness =\t" +str(ad_friendliness))
                               print("Drool =\t" +str(ad_drool))
-
-                        p_cat = raw_input("\nWhat catagory would you like to use?\n>>>\t")
-                        p_cat = p_cat.lower()
+                        p_cat = ''
+                        while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool':
+                              p_cat = raw_input("\nWhat catagory would you like to use?\n>>>\t") #Ask what category the player would like to use
+                              p_cat = p_cat.lower() #set p_cat to all lower-case
+                              if p_cat == 'intelligence': #if p_cat is 'drool', do
+                                    print("Ok")
+                              elif p_cat == 'exercise': #if p_cat is 'exercise', do
+                                    print("Ok")
+                              elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
+                                    print("Ok")
+                              elif p_cat == 'drool': #if p_cat is 'drool', do
+                                    print("Ok")
+                              else: #if p_cat is none, do, and repeat loop
+                                    print("Error!")
+                                    
                   else:
                         print("Unknown Error! Retrurning to card selection.")
                         game()#return to card selection
