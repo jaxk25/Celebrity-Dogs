@@ -593,6 +593,19 @@ def game():#main game
                                     print("Ok")
                               else: #if p_cat is none, do, and repeat loop
                                     print("Error!")
+                        c_cat = random.randint(1,4)
+                        if c_cat == 1:
+                              c_cat = 'Intelligence'
+                        elif c_cat == 2:
+                              c_cat = 'Excercise'
+                        elif c_cat == 3:
+                              c_cat = 'Friendliness'
+                        elif c_cat == 4:
+                              c_cat = 'Drool'
+                        else:
+                              print("Error with random module")
+                              
+                        print('The computer selected: ' +c_cat)
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
