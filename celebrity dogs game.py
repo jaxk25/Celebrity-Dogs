@@ -597,6 +597,7 @@ def game():#main game
                                     else:
                                           print("Error with random module")
                                     print('\nThe computer selected: ' +c_cat)
+                                    break
                               elif p_cat == 'exercise': #if p_cat is 'exercise', do
                                     print("Ok")
                                     c_cat = random.randint(1,4)
@@ -611,6 +612,7 @@ def game():#main game
                                     else:
                                           print("Error with random module")
                                     print('\nThe computer selected: ' +c_cat)
+                                    break
                               elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
                                     print("Ok")
                                     c_cat = random.randint(1,4)
@@ -625,6 +627,7 @@ def game():#main game
                                     else:
                                           print("Error with random module")
                                     print('\nThe computer selected: ' +c_cat)
+                                    break
                               elif p_cat == 'drool': #if p_cat is 'drool', do
                                     print("Ok")
                                     c_cat = random.randint(1,4)
@@ -639,6 +642,7 @@ def game():#main game
                                     else:
                                           print("Error with random module")
                                     print('\nThe computer selected: ' +c_cat)
+                                    break
                               else: #if p_cat is none, do, and repeat loop
                                     print("Error!")
                                     
