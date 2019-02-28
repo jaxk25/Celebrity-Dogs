@@ -2,11 +2,11 @@
 Python Game based on the AQA GCSE Computer Science 2019 Exam Task.  
 To run, make sure you have Python 2.  
 ### To run in Linux
-In the Command Line, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`  
+In the Command Line, type `python celebrity\ dogs\ game.py`
 ### To run in Windows
-In the Command Prompt, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py`
+In the Command Prompt, type `python celebrity\ dogs\ game.py`
 ### To run on Mac
-In the Terminal, type `python celebrity\ dogs\ game.py` or `python3 celebrity\ dogs\ game.py` 
+In the Terminal, type `python celebrity\ dogs\ game.py`
 # Download Celebrity Dogs
 To download Celebrity Dogs, click [Here](https://github.com/jaxk25/Celebrity-Dogs/releases/tag/V0.1%CE%B1) 
 ## How to play
