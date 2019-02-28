@@ -585,27 +585,62 @@ def game():#main game
                               p_cat = p_cat.lower() #set p_cat to all lower-case
                               if p_cat == 'intelligence': #if p_cat is 'drool', do
                                     print("Ok")
+                                    c_cat = random.randint(1,4)
+                                    if c_cat == 1:
+                                          c_cat = 'Intelligence'
+                                    elif c_cat == 2:
+                                          c_cat = 'Excercise'
+                                    elif c_cat == 3:
+                                          c_cat = 'Friendliness'
+                                    elif c_cat == 4:
+                                          c_cat = 'Drool'
+                                    else:
+                                          print("Error with random module")
+                                    print('\nThe computer selected: ' +c_cat)
                               elif p_cat == 'exercise': #if p_cat is 'exercise', do
                                     print("Ok")
+                                    c_cat = random.randint(1,4)
+                                    if c_cat == 1:
+                                          c_cat = 'Intelligence'
+                                    elif c_cat == 2:
+                                          c_cat = 'Excercise'
+                                    elif c_cat == 3:
+                                          c_cat = 'Friendliness'
+                                    elif c_cat == 4:
+                                          c_cat = 'Drool'
+                                    else:
+                                          print("Error with random module")
+                                    print('\nThe computer selected: ' +c_cat)
                               elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
                                     print("Ok")
+                                    c_cat = random.randint(1,4)
+                                    if c_cat == 1:
+                                          c_cat = 'Intelligence'
+                                    elif c_cat == 2:
+                                          c_cat = 'Excercise'
+                                    elif c_cat == 3:
+                                          c_cat = 'Friendliness'
+                                    elif c_cat == 4:
+                                          c_cat = 'Drool'
+                                    else:
+                                          print("Error with random module")
+                                    print('\nThe computer selected: ' +c_cat)
                               elif p_cat == 'drool': #if p_cat is 'drool', do
                                     print("Ok")
+                                    c_cat = random.randint(1,4)
+                                    if c_cat == 1:
+                                          c_cat = 'Intelligence'
+                                    elif c_cat == 2:
+                                          c_cat = 'Excercise'
+                                    elif c_cat == 3:
+                                          c_cat = 'Friendliness'
+                                    elif c_cat == 4:
+                                          c_cat = 'Drool'
+                                    else:
+                                          print("Error with random module")
+                                    print('\nThe computer selected: ' +c_cat)
                               else: #if p_cat is none, do, and repeat loop
                                     print("Error!")
-                        c_cat = random.randint(1,4)
-                        if c_cat == 1:
-                              c_cat = 'Intelligence'
-                        elif c_cat == 2:
-                              c_cat = 'Excercise'
-                        elif c_cat == 3:
-                              c_cat = 'Friendliness'
-                        elif c_cat == 4:
-                              c_cat = 'Drool'
-                        else:
-                              print("Error with random module")
-                              
-                        print('The computer selected: ' +c_cat)
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
