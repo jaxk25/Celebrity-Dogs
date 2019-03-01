@@ -9,9 +9,9 @@ sudo pip install random
 echo ""
 echo "All done"
 echo ""
-echo "Now starting celebrity_dogs_game.py"
+echo "Now starting celebrity dogs game.py"
 echo ""
-python celebrity_dogs.py
+python celebrity\ dogs\ game.py
 echo ""
 echo ""
 echo ""
