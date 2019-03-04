@@ -647,6 +647,71 @@ def game():#main game
                                           break
                                     else: #if p_cat is none, do, and repeat loop
                                           print("Error!")
+                              if p_cat == 'intelligence':
+                                    if c_cat == 'Intelligence':
+                                          if player_cards[cards] == 'a':
+                                                p_cat_val = a_intelligence
+                                          elif player_cards[cards] == 'b':
+                                                p_cat_val = b_intelligence
+                                          elif player_cards[cards] == 'c':
+                                                p_cat_val = c_intelligence
+                                          elif player_cards[cards] == 'd':
+                                                p_cat_val = d_intelligence
+                                          elif player_cards[cards] == 'e':
+                                                p_cat_val = e_intelligence
+                                          elif player_cards[cards] == 'f':
+                                                p_cat_val = f_intelligence
+                                          elif player_cards[cards] == 'g':
+                                                p_cat_val = g_intelligence
+                                          elif player_cards[cards] == 'h':
+                                                p_cat_val = h_intelligence
+                                          elif player_cards[cards] == 'i':
+                                                p_cat_val = i_intelligence
+                                          elif player_cards[cards] == 'j':
+                                                p_cat_val = j_intelligence
+                                          elif player_cards[cards] == 'k':
+                                                p_cat_val = k_intelligence
+                                          elif player_cards[cards] == 'l':
+                                                p_cat_val = l_intelligence
+                                          elif player_cards[cards] == 'm':
+                                                p_cat_val = m_intelligence
+                                          elif player_cards[cards] == 'n':
+                                                p_cat_val = n_intelligence
+                                          elif player_cards[cards] == 'o':
+                                                p_cat_val = o_intelligence
+                                          elif player_cards[cards] == 'p':
+                                                p_cat_val = p_intelligence
+                                          elif player_cards[cards] == 'q':
+                                                p_cat_val = q_intelligence
+                                          elif player_cards[cards] == 'r':
+                                                p_cat_val = r_intelligence
+                                          elif player_cards[cards] == 's':
+                                                p_cat_val = s_intelligence
+                                          elif player_cards[cards] == 't':
+                                                p_cat_val = t_intelligence
+                                          elif player_cards[cards] == 'u':
+                                                p_cat_val = u_intelligence
+                                          elif player_cards[cards] == 'v':
+                                                p_cat_val = v_intelligence
+                                          elif player_cards[cards] == 'w':
+                                                p_cat_val = w_intelligence
+                                          elif player_cards[cards] == 'x':
+                                                p_cat_val = x_intelligence
+                                          elif player_cards[cards] == 'y':
+                                                p_cat_val = y_intelligence
+                                          elif player_cards[cards] == 'z':
+                                                p_cat_val = z_intelligence
+                                          elif player_cards[cards] == 'aa':
+                                                p_cat_val = aa_intelligence
+                                          elif player_cards[cards] == 'ab':
+                                                p_cat_val = ab_intelligence
+                                          elif player_cards[cards] == 'ac':
+                                                p_cat_val = ac_intelligence
+                                          elif player_cards[cards] == 'ad':
+                                                p_cat_val = ad_intelligence
+                                          else:
+                                                print("Error")
+                                    
                                           
                   else:
                         print("Unknown Error! Retrurning to card selection.")
