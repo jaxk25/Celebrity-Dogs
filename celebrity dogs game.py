@@ -1115,10 +1115,14 @@ def game():#main game
                               if p_cat == 'exercise':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
+                                          card_tbm = computer_cards[cards]
+                                          computer_cards.pop[cards]
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nNo-one won.")
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
+                                          card_tbm = player_cards[cards]
+                                          player_cards.pop[cards]
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
