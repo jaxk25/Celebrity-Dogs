@@ -599,7 +599,7 @@ def game():#main game
                                           break
                                     elif p_cat == 'drool': #if p_cat is 'drool', do
                                           print("Ok")
-                                          c_cat == 'Drool'
+                                          c_cat = 'Drool'
                                           break
                                     else: #if p_cat is none, do, and repeat loop
                                           print("Error!")
@@ -1112,17 +1112,23 @@ def game():#main game
                                                 print("Error")
                                     else:
                                           print("Error!")
-                              if p_cat == 'exercise':
+                              if p_cat == 'intelligence':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
+                                          print(player_cards)
                                           card_tbm = computer_cards[cards]
                                           computer_cards.pop[cards]
+                                          player_cards.append(card_tbm)
+                                          print(player_cards)
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nNo-one won.")
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
+                                          print(computer_cards)
                                           card_tbm = player_cards[cards]
                                           player_cards.pop[cards]
+                                          computer_cards.append(card_tbm)
+                                          print(computer_cards)
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
