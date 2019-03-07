@@ -1117,7 +1117,7 @@ def game():#main game
                                           print("You had a higher score than the computer!\nYou won!")
                                           print(player_cards)
                                           card_tbm = computer_cards[cards]
-                                          computer_cards.pop[cards]
+                                          computer_cards.pop(cards)
                                           player_cards.append(card_tbm)
                                           print(player_cards)
                                     elif p_cat_val == c_cat_val:
@@ -1126,7 +1126,7 @@ def game():#main game
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           print(computer_cards)
                                           card_tbm = player_cards[cards]
-                                          player_cards.pop[cards]
+                                          player_cards.pop(cards)
                                           computer_cards.append(card_tbm)
                                           print(computer_cards)
                                     
