@@ -1115,20 +1115,57 @@ def game():#main game
                               if p_cat == 'intelligence':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
-                                          print(player_cards)
                                           card_tbm = computer_cards[cards]
-                                          computer_cards.pop(cards)
+                                          computer_cards.pop(computer_cards[cards])
                                           player_cards.append(card_tbm)
-                                          print(player_cards)
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nNo-one won.")
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          print(computer_cards)
                                           card_tbm = player_cards[cards]
-                                          player_cards.pop(cards)
+                                          player_cards.pop(player_cards[cards])
                                           computer_cards.append(card_tbm)
-                                          print(computer_cards)
+                              elif p_cat == 'exercise':
+                                    if p_cat_val > c_cat_val:
+                                          print("You had a higher score than the computer!\nYou won!")
+                                          card_tbm = computer_cards[cards]
+                                          computer_cards.pop(computer_cards[cards])
+                                          player_cards.append(card_tbm)
+                                    elif p_cat_val == c_cat_val:
+                                          print("You and the computer drew.\nNo-one won.")
+                                    else:
+                                          print("The computer had a higher score than you.\nThe computer won.")
+                                          card_tbm = player_cards[cards]
+                                          player_cards.pop(player_cards[cards])
+                                          computer_cards.append(card_tbm)
+                              elif p_cat == 'friendliness':
+                                    if p_cat_val > c_cat_val:
+                                          print("You had a higher score than the computer!\nYou won!")
+                                          card_tbm = computer_cards[cards]
+                                          computer_cards.pop(computer_cards[cards])
+                                          player_cards.append(card_tbm)
+                                    elif p_cat_val == c_cat_val:
+                                          print("You and the computer drew.\nNo-one won.")
+                                    else:
+                                          print("The computer had a higher score than you.\nThe computer won.")
+                                          card_tbm = player_cards[cards]
+                                          player_cards.pop(player_cards[cards])
+                                          computer_cards.append(card_tbm)
+                              elif p_cat == 'drool':
+                                    if p_cat_val < c_cat_val:
+                                          print("You had a lower score than the computer!\nYou won!")
+                                          card_tbm = computer_cards[cards]
+                                          computer_cards.pop(computer_cards[cards])
+                                          player_cards.append(card_tbm)
+                                    elif p_cat_val == c_cat_val:
+                                          print("You and the computer drew.\nNo-one won.")
+                                    else:
+                                          print("The computer had a lower score than you.\nThe computer won.")
+                                          card_tbm = player_cards[cards]
+                                          player_cards.pop(player_cards[cards])
+                                          computer_cards.append(card_tbm)
+                              else:
+                                    print("Fatal Error!")
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
