@@ -3,6 +3,10 @@
 #import modules
 import random
 
+#set global variables
+p_cat_val = 0
+c_cat_val = 0
+
 def clear():#function to clear screen
       for i in range(0,100):
             print("\n")
@@ -369,6 +373,8 @@ def game():#main game
                                     computer_cards.append(random_card) #give card to computer
                                     allocated_cards.append(random_card) #set card as being used.
                         while len(player_cards) != 0:
+                              print(player_cards)
+                              print(computer_cards)
                               print("\nYour card is:")#tell the player what their first card is.
                               if player_cards[len(player_cards)-1] == 'a':#if card == __ , do
                                     p_card_selected = 'a' #set active player card
@@ -729,7 +735,8 @@ def game():#main game
                                           elif player_cards[len(player_cards)-1] == 'ad':
                                                 p_cat_val = ad_exercise
                                           else:
-                                                print("Error")
+                                                #error
+                                                print("")
                                     elif p_cat == 'friendliness':
                                           if player_cards[len(player_cards)-1] == 'a':
                                                 p_cat_val = a_friendliness
