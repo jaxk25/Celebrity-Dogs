@@ -2,6 +2,10 @@
 
 #define global variables
 all_cards = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','aa','ab','ac','ad']
+p_cat = ''
+c_cat = ''
+p_cat_val = ''
+c_cat_val = ''
 
 #import modules
 import random
@@ -23,6 +27,10 @@ def menu(): #quick start
             menu()
 
 def game():#main game
+      p_cat = ''
+      c_cat = ''
+      p_cat_val = ''
+      c_cat_val = ''
       possible_cards = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]#define number of cards that can be used
       cards_tbp = int(raw_input("\nHow many cards would you like to be played?\nThis includes you and the CPU\nThe number must be above 4, but below 30, and only an even number.\n>>>\t"))#ask for input and convert it into an integer
       print("You have selected to play " +str(cards_tbp) +" cards.\n")#print how many cards are selected
@@ -481,7 +489,7 @@ def game():#main game
                                           c_cat = 'Drool'
                                           break
                                     else: #if p_cat is none, do, and repeat loop
-                                          print("Error!")
+                                          print("")#error
                               if True:
                                     if p_cat == 'intelligence':#set p_cat_val to the correct value for the selected category
                                           if player_cards[len(player_cards)-1] == 'a':
@@ -608,7 +616,7 @@ def game():#main game
                                           elif player_cards[len(player_cards)-1] == 'ad':
                                                 p_cat_val = ad_exercise
                                           else:
-                                                print("Error")
+                                                print("")#error
                                     elif p_cat == 'friendliness':
                                           if player_cards[len(player_cards)-1] == 'a':
                                                 p_cat_val = a_friendliness
@@ -862,7 +870,7 @@ def game():#main game
                                           elif computer_cards[len(computer_cards)-1] == 'ad':
                                                 c_cat_val = ad_exercise
                                           else:
-                                                print("Error")
+                                                print("")
                                     elif c_cat == 'Friendliness':
                                           if computer_cards[len(computer_cards)-1] == 'a':
                                                 c_cat_val = a_friendliness
