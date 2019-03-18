@@ -1,5 +1,8 @@
 #celebrity dogs game
 
+#define global variables
+all_cards = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','aa','ab','ac','ad']
+
 #import modules
 import random
 
@@ -169,69 +172,7 @@ def game():#main game
                         player_cards = []
                         computer_cards = []
                         while len(player_cards) != (cards_tbp/2): #while the player has less than half of all cards played this game, do
-                              random_card = random.randint(1,30) #select a random card
-                              if random_card == 1: #decide what card it is
-                                    random_card = 'a'
-                              elif random_card == 2:
-                                    random_card = 'b'
-                              elif random_card == 3:
-                                    random_card = 'c'
-                              elif random_card == 4:
-                                    random_card = 'd'
-                              elif random_card == 5:
-                                    random_card = 'e'
-                              elif random_card == 6:
-                                    random_card = 'f'
-                              elif random_card == 7:
-                                    random_card = 'g'
-                              elif random_card == 8:
-                                    random_card = 'h'
-                              elif random_card == 9:
-                                    random_card = 'i'
-                              elif random_card == 10:
-                                    random_card = 'j'
-                              elif random_card == 11:
-                                    random_card = 'k'
-                              elif random_card == 12:
-                                    random_card = 'l'
-                              elif random_card == 13:
-                                    random_card = 'm'
-                              elif random_card == 14:
-                                    random_card = 'n'
-                              elif random_card == 15:
-                                    random_card = 'o'
-                              elif random_card == 16:
-                                    random_card = 'p'
-                              elif random_card == 17:
-                                    random_card = 'q'
-                              elif random_card == 18:
-                                    random_card = 'r'
-                              elif random_card == 19:
-                                    random_card = 's'
-                              elif random_card == 20:
-                                    random_card = 't'
-                              elif random_card == 21:
-                                    random_card = 'u'
-                              elif random_card == 22:
-                                    random_card = 'v'
-                              elif random_card == 23:
-                                    random_card = 'w'
-                              elif random_card == 24:
-                                    random_card = 'x'
-                              elif random_card == 25:
-                                    random_card = 'y'
-                              elif random_card == 26:
-                                    random_card = 'z'
-                              elif random_card == 27:
-                                    random_card = 'aa'
-                              elif random_card == 28:
-                                    random_card = 'ab'
-                              elif random_card == 29:
-                                    random_card = 'ac'
-                              elif random_card == 30:
-                                    random_card = 'ad'
-                              else: #if number is more than 30, return error, there is only 30 cards
-                                    print("Unknown Error! Returing to card selection.")
+                              random_card = random.choice(all_cards)
                               if random_card not in allocated_cards: #if the random card is not already being used, do
                                     player_cards.append(random_card) #give to player
                                     allocated_cards.append(random_card) #set as already being used
@@ -300,75 +241,12 @@ def game():#main game
                               else:
                                     print("Error! Retruning to card selection")
                                     game()
-                        print(player_cards)
                         print("\n")
                         while len(computer_cards) != (cards_tbp/2): #while the computer has less cards than half the amount of cards being played this game, do
-                              random_card = random.randint(1,30) #select a random card
-                              if random_card == 1:
-                                    random_card = 'a'
-                              elif random_card == 2:
-                                    random_card = 'b'
-                              elif random_card == 3:
-                                    random_card = 'c'
-                              elif random_card == 4:
-                                    random_card = 'd'
-                              elif random_card == 5:
-                                    random_card = 'e'
-                              elif random_card == 6:
-                                    random_card = 'f'
-                              elif random_card == 7:
-                                    random_card = 'g'
-                              elif random_card == 8:
-                                    random_card = 'h'
-                              elif random_card == 9:
-                                    random_card = 'i'
-                              elif random_card == 10:
-                                    random_card = 'j'
-                              elif random_card == 11:
-                                    random_card = 'k'
-                              elif random_card == 12:
-                                    random_card = 'l'
-                              elif random_card == 13:
-                                    random_card = 'm'
-                              elif random_card == 14:
-                                    random_card = 'n'
-                              elif random_card == 15:
-                                    random_card = 'o'
-                              elif random_card == 16:
-                                    random_card = 'p'
-                              elif random_card == 17:
-                                    random_card = 'q'
-                              elif random_card == 18:
-                                    random_card = 'r'
-                              elif random_card == 19:
-                                    random_card = 's'
-                              elif random_card == 20:
-                                    random_card = 't'
-                              elif random_card == 21:
-                                    random_card = 'u'
-                              elif random_card == 22:
-                                    random_card = 'v'
-                              elif random_card == 23:
-                                    random_card = 'w'
-                              elif random_card == 24:
-                                    random_card = 'x'
-                              elif random_card == 25:
-                                    random_card = 'y'
-                              elif random_card == 26:
-                                    random_card = 'z'
-                              elif random_card == 27:
-                                    random_card = 'aa'
-                              elif random_card == 28:
-                                    random_card = 'ab'
-                              elif random_card == 29:
-                                    random_card = 'ac'
-                              elif random_card == 30:
-                                    random_card = 'ad'
-                              else: #if the number is >30, return error, there is only 30 cards
-                                    print("Unknown Error! Returing to card selection.")
-                              if random_card not in allocated_cards: #if the card if not already being used, do
-                                    computer_cards.append(random_card) #give card to computer
-                                    allocated_cards.append(random_card) #set card as being used.
+                              random_card = random.choice(all_cards)
+                              if random_card not in allocated_cards: #if the random card is not already being used, do
+                                    computer_cards.append(random_card) #give to computer
+                                    allocated_cards.append(random_card) #set as already being used
                         while len(player_cards) != 0:
                               print("\nYour card is:")#tell the player what their first card is.
                               if player_cards[len(player_cards)-1] == 'a':#if card == __ , do
