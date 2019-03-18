@@ -3,10 +3,6 @@
 #import modules
 import random
 
-#set global variables
-p_cat_val = 0
-c_cat_val = 0
-
 def clear():#function to clear screen
       for i in range(0,100):
             print("\n")
@@ -240,70 +236,71 @@ def game():#main game
                                     player_cards.append(random_card) #give to player
                                     allocated_cards.append(random_card) #set as already being used
                         print("Your cards are:")#tell the player what cards they have
-                        for cards in range(0, len(player_cards)): #repeat for the amount of cards that the player has
-                              if player_cards[len(player_cards)-1] == 'a': #tell the player the name of the cards they have
+                        for cards in range(len(player_cards)-1): #repeat for the amount of cards that the player has
+                              if player_cards[cards] == 'a': #tell the player the name of the cards they have
                                     print("\n\tAnnie the Afgan Hound")
-                              elif player_cards[len(player_cards)-1] == 'b':
+                              elif player_cards[cards] == 'b':
                                     print("\n\tBertie the Boxer")
-                              elif player_cards[len(player_cards)-1] == 'c':
+                              elif player_cards[cards] == 'c':
                                     print("\n\tBetty the Borzoi")
-                              elif player_cards[len(player_cards)-1] == 'd':
+                              elif player_cards[cards] == 'd':
                                     print("\n\tCharlie the Chihuahua")
-                              elif player_cards[len(player_cards)-1] == 'e':
+                              elif player_cards[cards] == 'e':
                                     print("\n\tChaz the Cockerspaniel")
-                              elif player_cards[len(player_cards)-1] == 'f':
+                              elif player_cards[cards] == 'f':
                                     print("\n\tDonald the Dalmation")
-                              elif player_cards[len(player_cards)-1] == 'g':
+                              elif player_cards[cards] == 'g':
                                     print("\n\tAlfie the Affenpinscher")
-                              elif player_cards[len(player_cards)-1] == 'h':
+                              elif player_cards[cards] == 'h':
                                     print("\n\tAlbert the Alaskan Klee Kai")
-                              elif player_cards[len(player_cards)-1] == 'i':
+                              elif player_cards[cards] == 'i':
                                     print("\n\tBernie the Black and Tan Coonhound")
-                              elif player_cards[len(player_cards)-1] == 'j':
+                              elif player_cards[cards] == 'j':
                                     print("\n\tChloe the Chinese Shar-Pei")
-                              elif player_cards[len(player_cards)-1] == 'k':
+                              elif player_cards[cards] == 'k':
                                     print("\n\tElizabeth the English Toy Spaniel")
-                              elif player_cards[len(player_cards)-1] == 'l':
+                              elif player_cards[cards] == 'l':
                                     print("\n\tJake the Japanese Chin")
-                              elif player_cards[len(player_cards)-1] == 'm':
+                              elif player_cards[cards] == 'm':
                                     print("\n\tKaty the Korean Jindo Dog")
-                              elif player_cards[len(player_cards)-1] == 'n':
+                              elif player_cards[cards] == 'n':
                                     print("\n\tKaapro the Kooikerhondje")
-                              elif player_cards[len(player_cards)-1] == 'o':
+                              elif player_cards[cards] == 'o':
                                     print("\n\tKa the Komondor")
-                              elif player_cards[len(player_cards)-1] == 'p':
+                              elif player_cards[cards] == 'p':
                                     print("\n\tMatt the Mutt")
-                              elif player_cards[len(player_cards)-1] == 'q':
+                              elif player_cards[cards] == 'q':
                                     print("\n\tNancy the Norfolk Terrier")
-                              elif player_cards[len(player_cards)-1] == 'r':
+                              elif player_cards[cards] == 'r':
                                     print("\n\tNoelle the Norwich Terrier")
-                              elif player_cards[len(player_cards)-1] == 's':
+                              elif player_cards[cards] == 's':
                                     print("\n\tNatasha the Nova Scotia Tolling Retriever")
-                              elif player_cards[len(player_cards)-1] == 't':
+                              elif player_cards[cards] == 't':
                                     print("\n\tStacy the Staffordshire Bull Terrier")
-                              elif player_cards[len(player_cards)-1] == 'u':
+                              elif player_cards[cards] == 'u':
                                     print("\n\tBrenda the Bull Dog")
-                              elif player_cards[len(player_cards)-1] == 'v':
+                              elif player_cards[cards] == 'v':
                                     print("\n\tDarcy the Dogo Argentino")
-                              elif player_cards[len(player_cards)-1] == 'w':
+                              elif player_cards[cards] == 'w':
                                     print("\n\tGlenda the German Shorthaired Pointer")
-                              elif player_cards[len(player_cards)-1] == 'x':
+                              elif player_cards[cards] == 'x':
                                     print("\n\tHerbet the Havanese")
-                              elif player_cards[len(player_cards)-1] == 'y':
+                              elif player_cards[cards] == 'y':
                                     print("\n\tPeter the Pekingese")
-                              elif player_cards[len(player_cards)-1] == 'z':
+                              elif player_cards[cards] == 'z':
                                     print("\n\tPerkie the Plott")
-                              elif player_cards[len(player_cards)-1] == 'aa':
+                              elif player_cards[cards] == 'aa':
                                     print("\n\tPoppy the Puli")
-                              elif player_cards[len(player_cards)-1] == 'ab':
+                              elif player_cards[cards] == 'ab':
                                     print("\n\tXenophon the Xoloitzcuintli")
-                              elif player_cards[len(player_cards)-1] == 'ac':
+                              elif player_cards[cards] == 'ac':
                                     print("\n\tYork the Yorkipoo")
-                              elif player_cards[len(player_cards)-1] == 'ad':
+                              elif player_cards[cards] == 'ad':
                                     print("\n\tSan the Samoyed")
                               else:
                                     print("Error! Retruning to card selection")
                                     game()
+                        print(player_cards)
                         print("\n")
                         while len(computer_cards) != (cards_tbp/2): #while the computer has less cards than half the amount of cards being played this game, do
                               random_card = random.randint(1,30) #select a random card
@@ -373,8 +370,6 @@ def game():#main game
                                     computer_cards.append(random_card) #give card to computer
                                     allocated_cards.append(random_card) #set card as being used.
                         while len(player_cards) != 0:
-                              print(player_cards)
-                              print(computer_cards)
                               print("\nYour card is:")#tell the player what their first card is.
                               if player_cards[len(player_cards)-1] == 'a':#if card == __ , do
                                     p_card_selected = 'a' #set active player card
@@ -735,8 +730,7 @@ def game():#main game
                                           elif player_cards[len(player_cards)-1] == 'ad':
                                                 p_cat_val = ad_exercise
                                           else:
-                                                #error
-                                                print("")
+                                                print("Error")
                                     elif p_cat == 'friendliness':
                                           if player_cards[len(player_cards)-1] == 'a':
                                                 p_cat_val = a_friendliness
