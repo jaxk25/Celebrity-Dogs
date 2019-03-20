@@ -256,7 +256,7 @@ def game():#main game
                                     computer_cards.append(random_card) #give to computer
                                     allocated_cards.append(random_card) #set as already being used
                         while len(player_cards) != 0:
-                              print("\nYour card is:")#tell the player what their first card is.
+                              print("\nYour card is:")#tell the player what their card is.
                               if player_cards[len(player_cards)-1] == 'a':#if card == __ , do
                                     p_card_selected = 'a' #set active player card
                                     print("\nAnnie the Afgan Hound")#print name
@@ -1010,7 +1010,14 @@ def game():#main game
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
                                     elif p_cat_val == c_cat_val:
-                                          print("You and the computer drew.\nNo-one won.")
+                                          print("You and the computer drew.\nYou get the cards.")
+                                          card_tbm = computer_cards[len(computer_cards)-1]
+                                          computer_cards.pop(len(computer_cards)-1)
+                                          player_cards.append(card_tbm)
+                                          
+                                          card_tbm = player_cards[len(player_cards)-1]
+                                          player_cards.pop(len(player_cards)-1)
+                                          player_cards.append(card_tbm)
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1031,7 +1038,14 @@ def game():#main game
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
                                     elif p_cat_val == c_cat_val:
-                                          print("You and the computer drew.\nNo-one won.")
+                                          print("You and the computer drew.\nYou get the cards.")
+                                          card_tbm = computer_cards[len(computer_cards)-1]
+                                          computer_cards.pop(len(computer_cards)-1)
+                                          player_cards.append(card_tbm)
+
+                                          card_tbm = player_cards[len(player_cards)-1]
+                                          player_cards.pop(len(player_cards)-1)
+                                          player_cards.append(card_tbm)
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1052,7 +1066,14 @@ def game():#main game
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
                                     elif p_cat_val == c_cat_val:
-                                          print("You and the computer drew.\nNo-one won.")
+                                          print("You and the computer drew.\nYou get the cards.")
+                                          card_tbm = computer_cards[len(computer_cards)-1]
+                                          computer_cards.pop(len(computer_cards)-1)
+                                          player_cards.append(card_tbm)
+
+                                          card_tbm = player_cards[len(player_cards)-1]
+                                          player_cards.pop(len(player_cards)-1)
+                                          player_cards.append(card_tbm)
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1073,7 +1094,14 @@ def game():#main game
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
                                     elif p_cat_val == c_cat_val:
-                                          print("You and the computer drew.\nNo-one won.")
+                                          print("You and the computer drew.\nYou get the cards.")
+                                          card_tbm = computer_cards[len(computer_cards)-1]
+                                          computer_cards.pop(len(computer_cards)-1)
+                                          player_cards.append(card_tbm)
+
+                                          card_tbm = player_cards[len(player_cards)-1]
+                                          player_cards.pop(len(player_cards)-1)
+                                          player_cards.append(card_tbm)
                                     else:
                                           print("The computer had a lower score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1085,7 +1113,10 @@ def game():#main game
                                           computer_cards.append(card_tbm)
                               else:
                                     print("Fatal Error!")
-                                    
+                        if len(player_cards) == 0:
+                              print("Bad luck!\nThe computer won.\n")
+                        else:
+                              print("Well done!\nYou won!\n")
                   else:
                         print("Unknown Error! Retrurning to card selection.")
                         game()#return to card selection
