@@ -6,6 +6,7 @@ p_cat = ''
 c_cat = ''
 p_cat_val = ''
 c_cat_val = ''
+winner=""
 
 #import modules
 import random
@@ -31,6 +32,8 @@ def game():#main game
       c_cat = ''
       p_cat_val = ''
       c_cat_val = ''
+      winner=""
+      winner="player"
       possible_cards = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]#define number of cards that can be used
       cards_tbp = int(raw_input("\nHow many cards would you like to be played?\nThis includes you and the CPU\nThe number must be above 4, but below 30, and only an even number.\n>>>\t"))#ask for input and convert it into an integer
       print("You have selected to play " +str(cards_tbp) +" cards.\n")#print how many cards are selected
@@ -490,6 +493,24 @@ def game():#main game
                                           break
                                     else: #if p_cat is none, do, and repeat loop
                                           print("")#error
+
+                              if winner == "player":
+                                    #do nothing here
+                                    break
+                              elif winner == "computer":
+                                    c_cat = random.choice('Intelligence','Exercise','Friendliness','Drool')
+                                    if c_cat == 'Intelligence':
+                                          p_cat = 'intelligence'
+                                    elif c_cat == 'Exercise':
+                                          p_cat = 'exercise'
+                                    elif c_cat == 'Friendliness':
+                                          p_cat = 'friendliness'
+                                    elif c_cat == 'Drool':
+                                          p_cat = 'drool'
+                                    else:
+                                          print("Error")
+                              else:
+                                    print("Error")
                               if True:
                                     if p_cat == 'intelligence':#set p_cat_val to the correct value for the selected category
                                           if player_cards[len(player_cards)-1] == 'a':
@@ -1009,6 +1030,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+                                          
+                                          winner="player"
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
                                           card_tbm = computer_cards[len(computer_cards)-1]
@@ -1018,6 +1041,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+                                          
+                                          winner="player"
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1027,6 +1052,8 @@ def game():#main game
                                           card_tbm = computer_cards[len(computer_cards)-1]
                                           computer_cards.pop(len(computer_cards)-1)
                                           computer_cards.append(card_tbm)
+
+                                          winner="computer"
                               elif p_cat == 'exercise':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
@@ -1037,6 +1064,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+
+                                          winner="player"
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
                                           card_tbm = computer_cards[len(computer_cards)-1]
@@ -1046,6 +1075,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+                                          
+                                          winner="player"
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1055,6 +1086,8 @@ def game():#main game
                                           card_tbm = computer_cards[len(computer_cards)-1]
                                           computer_cards.pop(len(computer_cards)-1)
                                           computer_cards.append(card_tbm)
+                                          
+                                          winner="computer"
                               elif p_cat == 'friendliness':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
@@ -1065,6 +1098,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+
+                                          winner="player"
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
                                           card_tbm = computer_cards[len(computer_cards)-1]
@@ -1074,6 +1109,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+
+                                          winner="player"
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1083,6 +1120,8 @@ def game():#main game
                                           card_tbm = computer_cards[len(computer_cards)-1]
                                           computer_cards.pop(len(computer_cards)-1)
                                           computer_cards.append(card_tbm)
+
+                                          winner="computer"
                               elif p_cat == 'drool':
                                     if p_cat_val < c_cat_val:
                                           print("You had a lower score than the computer!\nYou won!")
@@ -1093,6 +1132,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+
+                                          winner="player"
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
                                           card_tbm = computer_cards[len(computer_cards)-1]
@@ -1102,6 +1143,8 @@ def game():#main game
                                           card_tbm = player_cards[len(player_cards)-1]
                                           player_cards.pop(len(player_cards)-1)
                                           player_cards.append(card_tbm)
+
+                                          winner="player"
                                     else:
                                           print("The computer had a lower score than you.\nThe computer won.")
                                           card_tbm = player_cards[len(player_cards)-1]
@@ -1111,11 +1154,13 @@ def game():#main game
                                           card_tbm = computer_cards[len(computer_cards)-1]
                                           computer_cards.pop(len(computer_cards)-1)
                                           computer_cards.append(card_tbm)
+
+                                          winner="computer"
                               else:
                                     print("Fatal Error!")
                         if len(player_cards) == 0:
                               print("Bad luck!\nThe computer won.\n")
-                        else:
+                        elif len(computer_cards) == 0:
                               print("Well done!\nYou won!\n")
                   else:
                         print("Unknown Error! Retrurning to card selection.")
