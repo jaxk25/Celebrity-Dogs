@@ -482,6 +482,7 @@ def game():#main game
                                           elif p_cat == 'exercise': #if p_cat is 'exercise', do
                                                 print("Ok")
                                                 c_cat = 'Excercise'
+                                                break
                                           elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
                                                 print("Ok")
                                                 c_cat = 'Friendliness'
