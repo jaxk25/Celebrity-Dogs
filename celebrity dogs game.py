@@ -472,33 +472,30 @@ def game():#main game
                                     print("Drool =\t" +str(ad_drool))
                               print("")
                               p_cat = ''
-                              while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool':
-                                    p_cat = raw_input("\nWhat catagory would you like to use?\n>>>\t") #Ask what category the player would like to use
-                                    p_cat = p_cat.lower() #set p_cat to all lower-case
-                                    if p_cat == 'intelligence': #if p_cat is 'drool', do
-                                          print("Ok")
-                                          c_cat = 'Intelligence'
-                                          break
-                                    elif p_cat == 'exercise': #if p_cat is 'exercise', do
-                                          print("Ok")
-                                          c_cat = 'Excercise'
-                                          break
-                                    elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
-                                          print("Ok")
-                                          c_cat = 'Friendliness'
-                                          break
-                                    elif p_cat == 'drool': #if p_cat is 'drool', do
-                                          print("Ok")
-                                          c_cat = 'Drool'
-                                          break
-                                    else: #if p_cat is none, do, and repeat loop
-                                          print("")#error
-
                               if winner == "player":
-                                    #do nothing here
-                                    break
+                                    while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool':
+                                          p_cat = raw_input("\nWhat category would you like to use?\n>>> ") #Ask what category the player would like to use
+                                          p_cat = p_cat.lower() #set p_cat to all lower-case
+                                          if p_cat == 'intelligence': # if p_cat is 'drool', do
+                                                print("Ok")
+                                                c_cat = 'Intelligence'
+                                          elif p_cat == 'exercise': #if p_cat is 'exercise', do
+                                                print("Ok")
+                                                c_cat = 'Excercise'
+                                          elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
+                                                print("Ok")
+                                                c_cat = 'Friendliness'
+                                                break
+                                          elif p_cat == 'drool': #if p_cat is 'drool', do
+                                                print("Ok")
+                                                c_cat = 'Drool'
+                                                break
+                                          else: #if p_cat is none, do, and repeat loop
+                                                print("")#error
+                                                
                               elif winner == "computer":
-                                    c_cat = random.choice('Intelligence','Exercise','Friendliness','Drool')
+                                    all_categories = ['Intelligence', 'Exercise', 'Friendliness', 'Drool']
+                                    c_cat = random.choice(all_categories)
                                     if c_cat == 'Intelligence':
                                           p_cat = 'intelligence'
                                     elif c_cat == 'Exercise':
@@ -1158,15 +1155,27 @@ def game():#main game
                                           winner="computer"
                               else:
                                     print("Fatal Error!")
-                        if len(player_cards) == 0:
-                              print("Bad luck!\nThe computer won.\n")
-                        elif len(computer_cards) == 0:
-                              print("Well done!\nYou won!\n")
+
+                              if len(player_cards) == cards_tbp or len(computer_cards) == int('0'):
+                                    print("Well done, you won!")
+                              elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp:
+                                    print("Bad luck, you lost.")
+                              else:
+                                    print("") #Do literally nothing
                   else:
                         print("Unknown Error! Retrurning to card selection.")
                         game()#return to card selection
       else:
               print("Error with selected number of cards. Returning to card selection.")
               game()#return to card selection
-              
+
+def finish():
+      if len(player_cards) == 0:
+            print("Bad luck, you lost.")
+      elif len(computer_cards) == 0:
+            print("Well done, you won!")
+      elif len(computer_cards) and len(player_cards) != 0:
+            print("Error")
+            
+
 menu()#start the menu function
