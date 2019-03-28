@@ -23,6 +23,7 @@ def menu(): #quick start
       elif menu_choice == 'quit':
             print("\nThank you for playing")
             raw_input("Press RETURN to exit")#when RETURN pressed, end program
+            quit()
       else:
             print("\nError\n")#if neither result is entered, return an error and use the menu function
             menu()
@@ -492,6 +493,9 @@ def game():#main game
                                                 print("Ok")
                                                 c_cat = 'Drool'
                                                 break
+                                          elif p_cat == 'overide': #if overide is given, quit this game
+                                                print("Ok")
+                                                game()
                                           else: #if p_cat is none, do, and repeat loop
                                                 print("")#error
                                                 
@@ -1159,6 +1163,8 @@ def game():#main game
                                     print("Fatal Error!")
 
                               if len(player_cards) == cards_tbp or len(computer_cards) == int('0'):
+                                    player_cards = []
+                                    computer_cards = []
                                     print("Well done, you won!")
                                     print("\nThank you for playing")
                                     raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
@@ -1170,6 +1176,7 @@ def game():#main game
                                     elif menu_choice == 'quit':
                                           print("\nThank you for playing")
                                           raw_input("Press RETURN to exit")#when RETURN pressed, end program
+                                          quit()
                                     else:
                                           print("\nError\n")#if neither result is entered, return an error and use the menu function
                                           menu()
@@ -1185,6 +1192,7 @@ def game():#main game
                                     elif menu_choice == 'quit':
                                           print("\nThank you for playing")
                                           raw_input("Press RETURN to exit")#when RETURN pressed, end program
+                                          quit()
                                     else:
                                           print("\nError\n")#if neither result is entered, return an error and use the menu function
                                           menu()
