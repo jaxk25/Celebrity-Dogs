@@ -479,6 +479,7 @@ def game():#main game
                                           if p_cat == 'intelligence': # if p_cat is 'drool', do
                                                 print("Ok")
                                                 c_cat = 'Intelligence'
+                                                break
                                           elif p_cat == 'exercise': #if p_cat is 'exercise', do
                                                 print("Ok")
                                                 c_cat = 'Excercise'
@@ -1159,8 +1160,34 @@ def game():#main game
 
                               if len(player_cards) == cards_tbp or len(computer_cards) == int('0'):
                                     print("Well done, you won!")
+                                    print("\nThank you for playing")
+                                    raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
+                                    clear()
+                                    menu_choice = raw_input("Play Game\nQuit\n>>> ")
+                                    menu_choice = menu_choice.lower()#set characters in menu_choice to all lower case
+                                    if menu_choice == 'play game':
+                                          game()#start game function
+                                    elif menu_choice == 'quit':
+                                          print("\nThank you for playing")
+                                          raw_input("Press RETURN to exit")#when RETURN pressed, end program
+                                    else:
+                                          print("\nError\n")#if neither result is entered, return an error and use the menu function
+                                          menu()
                               elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp:
                                     print("Bad luck, you lost.")
+                                    print("\nThank you for playing")
+                                    raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
+                                    clear()
+                                    menu_choice = raw_input("Play Game\nQuit\n>>> ")
+                                    menu_choice = menu_choice.lower()#set characters in menu_choice to all lower case
+                                    if menu_choice == 'play game':
+                                          game()#start game function
+                                    elif menu_choice == 'quit':
+                                          print("\nThank you for playing")
+                                          raw_input("Press RETURN to exit")#when RETURN pressed, end program
+                                    else:
+                                          print("\nError\n")#if neither result is entered, return an error and use the menu function
+                                          menu()
                               else:
                                     print("") #Do literally nothing
                   else:
