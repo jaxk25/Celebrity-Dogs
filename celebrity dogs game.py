@@ -1165,6 +1165,7 @@ def game():#main game
                               if len(player_cards) == cards_tbp or len(computer_cards) == int('0'):
                                     player_cards = []
                                     computer_cards = []
+                                    clear()
                                     print("Well done, you won!")
                                     print("\nThank you for playing")
                                     raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
@@ -1181,6 +1182,9 @@ def game():#main game
                                           print("\nError\n")#if neither result is entered, return an error and use the menu function
                                           menu()
                               elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp:
+                                    player_cards = []
+                                    computer_cards = []
+                                    clear()
                                     print("Bad luck, you lost.")
                                     print("\nThank you for playing")
                                     raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
@@ -1213,5 +1217,5 @@ def finish():
       elif len(computer_cards) and len(player_cards) != 0:
             print("Error")
             
-
+clear()#make blank screen
 menu()#start the menu function
