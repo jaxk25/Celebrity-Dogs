@@ -23,42 +23,43 @@ def menu(): #quick start
       if menu_choice == 'play game':
             game()#start game function
 
-      elif menu_choice == 'help':
+      elif menu_choice == 'help':#display help information.
             print("\nWelcome to Celebrity Dogs!")
             print("To begin playing, type Play Game (case-insensitive), or to quit, type Quit (case-insensitive).")
             print("When playing the game, you will be given help at each section.")
             print("Thank you for playing Celebrity Dogs!\n")
 
-            menu()
+            menu()#restart the menu
             
-      elif menu_choice == 'quit':
+      elif menu_choice == 'quit':#If the player wants to quit:
             print("\nThank you for playing")
             raw_input("Press RETURN to exit")#when RETURN pressed, end program
-            quit()
+            quit()#Use python built-in to quit
             
       else:
             print("\nError\n")#if neither result is entered, return an error and use the menu function
-            menu()
+            menu()#restart the menu
 
 def game():#main game
+      #define variables
       p_cat = ''
       c_cat = ''
       p_cat_val = ''
       c_cat_val = ''
       winner=""
-      winner="player"
+      winner="player"#set winner to player for first round so they choose the category
       possible_cards = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]#define number of cards that can be used
       
-      while True:
-            try:
+      while True:#while the player has not picked a valid number of cards, repeat.
+            try:#ask for input
                   cards_tbp = int(raw_input("\nHow many cards would you like to be played?\nThis includes you and the computer.\nThe number must be above 4, but below 30, and only an even number.\n>>> "))#ask for input and convert it into an integer
                   print("\nYou have selected to play " +str(cards_tbp) +" cards.\n")#print how many cards are selected
-                  break
+                  break#if successful, break out of loop
             
-            except ValueError:
+            except ValueError:#if the number is not valid (e.g float or string, not int), then print on a new line 'That is not a valid number!'
                   print("\nThat is not a valid number!")
                   
-      selection = raw_input("Is this ok?\n>>>[Y/N] ")
+      selection = raw_input("Is this ok?\n>>>[Y/N] ")#confirm amount of cards
       selection = selection.lower()#set selection variable to all lower case
       
       if selection == 'y':
@@ -72,7 +73,7 @@ def game():#main game
             print("\nError\n")
             game() #error with selection, choose again
             
-      if cards_tbp in possible_cards:#if player's selection is valid in possible_cards, do
+      if cards_tbp in possible_cards:#if player's selection is valid and in possible_cards:
             f=open("dogs.txt", "r")#open dogs.txt in read mode
             
             if f.mode == 'r': #if opened correctly in read mode, do
@@ -80,7 +81,7 @@ def game():#main game
                   
                   a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,ab,ac,ad = contents.split("', '")#split contents into separate variables where there is a "', '"
                   
-                  a_exercise = random.randint(1,5) #randomly select variables
+                  a_exercise = random.randint(1,5) #randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
                   b_exercise = random.randint(1,5)
                   c_exercise = random.randint(1,5)
                   d_exercise = random.randint(1,5)
@@ -206,19 +207,19 @@ def game():#main game
                   
                   if cards_tbp <= 5: #check if number of cards is valid
                         print("Error! Cards selected is too low or not even. Returning to card selection...\n")
-                        game()
+                        game() #return to selection for amount of cards
                         
                   elif cards_tbp >= 29:
                         print("Error! Cards selected is too high or not even. Returning to card selection...\n")
-                        game()
+                        game() #return to selection for amount of cards
                         
-                  elif cards_tbp == 6 or 8 or 10 or 12 or 14 or 16 or 18 or 20 or 22 or 24 or 26 or 28:
-                        allocated_cards = []
-                        player_cards = []
-                        computer_cards = []
+                  elif cards_tbp == 6 or 8 or 10 or 12 or 14 or 16 or 18 or 20 or 22 or 24 or 26 or 28: #if number of cards is valid:
+                        allocated_cards = [] #set allocated cards to ''
+                        player_cards = [] #set the player's cards to ''
+                        computer_cards = [] #set the computer's cards to ''
                         
                         while len(player_cards) != (cards_tbp/2): #while the player has less than half of all cards played this game, do
-                              random_card = random.choice(all_cards)
+                              random_card = random.choice(all_cards) #pick a random card
                               
                               if random_card not in allocated_cards: #if the random card is not already being used, do
                                     player_cards.append(random_card) #give to player
@@ -318,12 +319,12 @@ def game():#main game
                                     
                               else:
                                     print("Error! Retruning to card selection")
-                                    game()
+                                    game() #return to card selection
                                     
                         print("\n")
                         
                         while len(computer_cards) != (cards_tbp/2): #while the computer has less cards than half the amount of cards being played this game, do
-                              random_card = random.choice(all_cards)
+                              random_card = random.choice(all_cards) #pick a random card
                               
                               if random_card not in allocated_cards: #if the random card is not already being used, do
                                     computer_cards.append(random_card) #give to computer
@@ -573,55 +574,55 @@ def game():#main game
                                     print("Drool =\t" +str(ad_drool))
                                     
                               print("")
-                              p_cat = ''
+                              p_cat = '' #set the player's category selection to nothing
                               
-                              if winner == "player":
-                                    while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool':
+                              if winner == "player": #if the player won the last round, or if this is the first round, give the player choice over the category
+                                    while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool': #while the player hasn't picked a valid category, loop
                                           p_cat = raw_input("\nWhat category would you like to use?\n>>> ") #Ask what category the player would like to use
                                           p_cat = p_cat.lower() #set p_cat to all lower-case
                                           
-                                          if p_cat == 'intelligence': # if p_cat is 'drool', do
+                                          if p_cat == 'intelligence': # if p_cat is 'intelligence', do
                                                 print("Ok")
-                                                c_cat = 'Intelligence'
-                                                break
+                                                c_cat = 'Intelligence' #set both player's categories to intelligence
+                                                break #break out of the loop
                                           
                                           elif p_cat == 'exercise': #if p_cat is 'exercise', do
                                                 print("Ok")
-                                                c_cat = 'Excercise'
-                                                break
+                                                c_cat = 'Excercise' #set both player's categories to exercise
+                                                break #break out of the loop
                                           
                                           elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
                                                 print("Ok")
-                                                c_cat = 'Friendliness'
-                                                break
+                                                c_cat = 'Friendliness' #set both player's categories to friendliness
+                                                break #break out of the loop
                                           
                                           elif p_cat == 'drool': #if p_cat is 'drool', do
                                                 print("Ok")
-                                                c_cat = 'Drool'
-                                                break
+                                                c_cat = 'Drool' #set both player's categories to drool
+                                                break #break out of the loop
                                           
                                           elif p_cat == 'overide': #if overide is given, quit this game
                                                 print("Ok")
-                                                game()
+                                                game() #return to card selection
                                                 
                                           else: #if p_cat is none, do, and repeat loop
                                                 print("")#error
                                                 
-                              elif winner == "computer":
-                                    all_categories = ['Intelligence', 'Exercise', 'Friendliness', 'Drool']
-                                    c_cat = random.choice(all_categories)
+                              elif winner == "computer": #if the computer won the last round, give the computer choice over the category
+                                    all_categories = ['Intelligence', 'Exercise', 'Friendliness', 'Drool'] #define the categories that the computer could pick
+                                    c_cat = random.choice(all_categories) #pick a random category
                                     
-                                    if c_cat == 'Intelligence':
+                                    if c_cat == 'Intelligence': #set both player's categories to intelligence
                                           p_cat = 'intelligence'
                                           
-                                    elif c_cat == 'Exercise':
+                                    elif c_cat == 'Exercise': #set both player's categories to exercise
                                           p_cat = 'exercise'
                                           
-                                    elif c_cat == 'Friendliness':
+                                    elif c_cat == 'Friendliness': #set both player's categories to friendliness
                                           p_cat = 'friendliness'
                                           
                                     elif c_cat == 'Drool':
-                                          p_cat = 'drool'
+                                          p_cat = 'drool' #set both player's categories to drool
                                           
                                     else:
                                           print("Error")
@@ -629,7 +630,7 @@ def game():#main game
                               else:
                                     print("Error")
                                     
-                              if True:
+                              if True: #always do:
                                     if p_cat == 'intelligence':#set p_cat_val to the correct value for the selected category
                                           if player_cards[len(player_cards)-1] == 'a':
                                                 p_cat_val = a_intelligence
@@ -1391,183 +1392,183 @@ def game():#main game
                               if p_cat == 'intelligence': #if p_cat is intelligence, do
                                     if p_cat_val > c_cat_val: #if the value of p_cat_val is bigger than the computer's, do
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
                                           
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
                                           
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
                                           
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
                                           
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="computer"
+                                          winner="computer" #decide who the winner is so they have control over the category next round
                                           
                               elif p_cat == 'exercise':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
                                           
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
                                           
-                                          winner="computer"
+                                          winner="computer" #decide who the winner is so they have control over the category next round
                                           
                               elif p_cat == 'friendliness':
                                     if p_cat_val > c_cat_val:
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     else:
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="computer"
+                                          winner="computer" #decide who the winner is so they have control over the category next round
                                           
                               elif p_cat == 'drool':
                                     if p_cat_val < c_cat_val:
                                           print("You had a lower score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     elif p_cat_val == c_cat_val:
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          player_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          player_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="player"
+                                          winner="player" #decide who the winner is so they have control over the category next round
                                           
                                     else:
                                           print("The computer had a lower score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1]
-                                          player_cards.pop(len(player_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          card_tbm = computer_cards[len(computer_cards)-1]
-                                          computer_cards.pop(len(computer_cards)-1)
-                                          computer_cards.append(card_tbm)
+                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) #remove the card
+                                          computer_cards.append(card_tbm) #give the card to the other player
 
-                                          winner="computer"
+                                          winner="computer" #decide who the winner is so they have control over the category next round
                                           
                               else:
                                     print("Fatal Error!") #error
 
                               if len(player_cards) == cards_tbp or len(computer_cards) == int('0'): #if the player has all cards or the computer has no cards, do
-                                    player_cards = []
-                                    computer_cards = []
-                                    clear()
+                                    player_cards = [] #remove all of the player's cards
+                                    computer_cards = [] #remove all of the computer's cards
+                                    clear() #clear the screen
                                     
                                     print("Well done, you won!")
                                     print("\nThank you for playing")
                                     
                                     raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
-                                    clear()
+                                    clear() #clear the screen
                                     
-                                    menu()
+                                    menu() #return to the menu
                                           
                               elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp: #if the player has no cards or the computer has all the cards, do
-                                    player_cards = []
-                                    computer_cards = []
-                                    clear()
+                                    player_cards = [] #remove all of the player's cards
+                                    computer_cards = [] #remove all of the computer's cards
+                                    clear() #clear the screen
                                     
                                     print("Bad luck, you lost.")
                                     print("\nThank you for playing")
                                     
                                     raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
-                                    clear()
+                                    clear() #clear the sreen
                                     
-                                    menu()
+                                    menu() #return to the menu
                                           
-                              else:
+                              else: #carry on with the game loop
                                     print("") #Do literally nothing
-                              time.sleep(1.5)
+                              time.sleep(1.5) #give 1.5 seconds in case the computer won the last round so they player can read the screen
                                     
                   else:
                         print("Unknown Error! Retrurning to card selection.")
