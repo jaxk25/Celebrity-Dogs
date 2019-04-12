@@ -613,16 +613,20 @@ def game():#main game
                                     c_cat = random.choice(all_categories) #pick a random category
                                     
                                     if c_cat == 'Intelligence': #set both player's categories to intelligence
+                                          print("\nThe computer chose intelligence.\n")
                                           p_cat = 'intelligence'
                                           
                                     elif c_cat == 'Exercise': #set both player's categories to exercise
+                                          print("\nThe computer chose exercise.\n")
                                           p_cat = 'exercise'
                                           
                                     elif c_cat == 'Friendliness': #set both player's categories to friendliness
+                                          print("\nThe computer chose friendliness.\n")
                                           p_cat = 'friendliness'
                                           
-                                    elif c_cat == 'Drool':
-                                          p_cat = 'drool' #set both player's categories to drool
+                                    elif c_cat == 'Drool': #set both player's categories to drool
+                                          print("\nThe computer chose drool.\n")
+                                          p_cat = 'drool'
                                           
                                     else:
                                           print("Error")
