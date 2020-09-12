@@ -950,121 +950,120 @@ def game(): # Function for the main game
                                                 print("Error") # Give an error
                                     else: # If not a recognised category,
                                           print("Error!") # Give an error
-                              if p_cat == 'intelligence': #if p_cat is intelligence, do
-                                    if p_cat_val > c_cat_val: #if the value of p_cat_val is bigger than the computer's, do
+                              if p_cat == 'intelligence': # If p_cat is intelligence,
+                                    if p_cat_val > c_cat_val: # If the value of p_cat_val is bigger than the computer's,
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    elif p_cat_val == c_cat_val:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    elif p_cat_val == c_cat_val: # If the value of p_cat_val is equal to the computer's,
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round  
-                                    else:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Cecide who the winner is so they have control over the category next round  
+                                    else: # If the value of p_cat_val is lower than the computer's,
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          winner="computer" #decide who the winner is so they have control over the category next round
-                              elif p_cat == 'exercise':
-                                    if p_cat_val > c_cat_val:
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          computer_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          computer_cards.append(card_tbm) # Send card to end of deck
+                                          winner="computer" # Decide who the winner is so they have control over the category next round
+                              elif p_cat == 'exercise': # If p_cat is exercise,
+                                    if p_cat_val > c_cat_val: # If the value of p_cat_val is bigger than the computer's,
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    elif p_cat_val == c_cat_val:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    elif p_cat_val == c_cat_val: # If the value of p_cat_val is equal to the computer's,
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    else:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    else: # If the value of p_cat_val is lower than the computer's,
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          winner="computer" #decide who the winner is so they have control over the category next round
-                              elif p_cat == 'friendliness':
-                                    if p_cat_val > c_cat_val:
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          computer_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          computer_cards.append(card_tbm) # Send card to end of deck
+                                          winner="computer" # Decide who the winner is so they have control over the category next round
+                              elif p_cat == 'friendliness': # If p_cat is friendliness,
+                                    if p_cat_val > c_cat_val: # If p_cat_val is bigger than the computer's,
                                           print("You had a higher score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    elif p_cat_val == c_cat_val:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    elif p_cat_val == c_cat_val: # If p_cat_val is equal to the computer's,
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round    
-                                    else:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round    
+                                    else: # If p_cat_val is lower than the computer's,
                                           print("The computer had a higher score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          winner="computer" #decide who the winner is so they have control over the category next round
-                              elif p_cat == 'drool':
-                                    if p_cat_val < c_cat_val:
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          computer_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          computer_cards.append(card_tbm) # Send card to end of deck
+                                          winner="computer" # Decide who the winner is so they have control over the category next round
+                              elif p_cat == 'drool': # If p_cat is drool,
+                                    if p_cat_val < c_cat_val: # If p_cat_val is lower than the computer's,
                                           print("You had a lower score than the computer!\nYou won!")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    elif p_cat_val == c_cat_val:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    elif p_cat_val == c_cat_val: # If p_cat_val is equal to the computer's,
                                           print("You and the computer drew.\nYou get the cards.")
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          player_cards.append(card_tbm) #give the card to the other player
-                                          winner="player" #decide who the winner is so they have control over the category next round
-                                    else:
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          player_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          player_cards.append(card_tbm) # Send card to end of deck
+                                          winner="player" # Decide who the winner is so they have control over the category next round
+                                    else: # If p_cat_val is bigger than the computer's,
                                           print("The computer had a lower score than you.\nThe computer won.")
-                                          card_tbm = player_cards[len(player_cards)-1] #select the card that needs to be moved
-                                          player_cards.pop(len(player_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          card_tbm = computer_cards[len(computer_cards)-1] #select the card that needs to be moved
-                                          computer_cards.pop(len(computer_cards)-1) #remove the card
-                                          computer_cards.append(card_tbm) #give the card to the other player
-                                          winner="computer" #decide who the winner is so they have control over the category next round          
-                              else:
-                                    print("Fatal Error!") #error
+                                          card_tbm = player_cards[len(player_cards)-1] # Select the card that needs to be moved
+                                          player_cards.pop(len(player_cards)-1) # Remove the card from the player's deck
+                                          computer_cards.append(card_tbm) # Give the card to the other player
+                                          card_tbm = computer_cards[len(computer_cards)-1] # Select the card that needs to be moved
+                                          computer_cards.pop(len(computer_cards)-1) # Remove the card from the computer's deck
+                                          computer_cards.append(card_tbm) # Send card to end of deck
+                                          winner="computer" # Decide who the winner is so they have control over the category next round          
+                              else: # If category is not one that is recognised,
+                                    print("Fatal Error!") # Give an error
                               if len(player_cards) == cards_tbp or len(computer_cards) == int('0'): #if the player has all cards or the computer has no cards, do
                                     player_cards = [] #remove all of the player's cards
                                     computer_cards = [] #remove all of the computer's cards
