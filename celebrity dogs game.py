@@ -1064,33 +1064,33 @@ def game(): # Function for the main game
                                           winner="computer" # Decide who the winner is so they have control over the category next round          
                               else: # If category is not one that is recognised,
                                     print("Fatal Error!") # Give an error
-                              if len(player_cards) == cards_tbp or len(computer_cards) == int('0'): #if the player has all cards or the computer has no cards, do
-                                    player_cards = [] #remove all of the player's cards
-                                    computer_cards = [] #remove all of the computer's cards
-                                    clear() #clear the screen
+                              if len(player_cards) == cards_tbp or len(computer_cards) == int('0'): # If the player has all cards or the computer has no cards,
+                                    player_cards = [] # Remove all of the player's cards
+                                    computer_cards = [] # Remove all of the computer's cards
+                                    clear() # Call the clear function to clear the screen
                                     print("Well done, you won!")
                                     print("\nThank you for playing")
-                                    raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
-                                    clear() #clear the screen
-                                    menu() #return to the menu
-                              elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp: #if the player has no cards or the computer has all the cards, do
-                                    player_cards = [] #remove all of the player's cards
-                                    computer_cards = [] #remove all of the computer's cards
-                                    clear() #clear the screen
+                                    raw_input("Press RETURN to return to the menu") # When the user presses RETURN,
+                                    clear() # Call the clear function to clear the screen
+                                    menu() # Call the menu function to show the main menu
+                              elif len(player_cards) == int('0') or len(computer_cards) == cards_tbp: # If the player has no cards or the computer has all the cards,
+                                    player_cards = [] # Remove all of the player's cards
+                                    computer_cards = [] # Remove all of the computer's cards
+                                    clear() # Call the clear function to clear the screen
                                     print("Bad luck, you lost.")
                                     print("\nThank you for playing")
-                                    raw_input("Press RETURN to return to the menu")#when RETURN pressed, do
-                                    clear() #clear the sreen
-                                    menu() #return to the menu
-                              else: #carry on with the game loop
-                                    print("") #Do literally nothing
-                              time.sleep(1.5) #give 1.5 seconds in case the computer won the last round so they player can read the screen
-                  else:
-                        print("Unknown Error! Retrurning to card selection.")
-                        game()#return to card selection
-      else:
-              print("Error with selected number of cards. Returning to card selection.")
-              game()#return to card selection
+                                    raw_input("Press RETURN to return to the menu") # When the user presses RETURN,
+                                    clear() # Call the clear function to clear the screen
+                                    menu() # Call the menu function to show the main menu
+                              else: # If no-one has won yet,
+                                    print("") # Print an empty line
+                              time.sleep(1.5) # Pause for 1.5 seconds in case the computer won the last round so the player can read the screen
+                  else: # If there is an error,
+                        print("Unknown Error! Retrurning to card selection.") # Give an error
+                        game() # Call the game function to restart the game
+      else: # If there is an error,
+              print("Error with selected number of cards. Returning to card selection.") # Give an error
+              game() # Call the game function to restart the game
 
-clear()#make blank screen
-menu()#start the menu function
+clear() # Call the clear function to clear the screen
+menu() # Call the menu function to show the main menu
