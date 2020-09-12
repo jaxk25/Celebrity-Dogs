@@ -1,95 +1,101 @@
-#!/usr/bin/env python
-#celebrity dogs game
-#define global variables
-all_cards = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','aa','ab','ac','ad'] #define the characters assigned to each card
-p_cat = '' #the player's category
-c_cat = '' #the computer's category
-p_cat_val = '' #the value of the player's category
-c_cat_val = '' #the value of the computer's category
-winner="" #the winner of the round
-#import modules
-import random
-import time
-def clear():#function to clear screen
-      for i in range(0,100):
-            print("\n")
-def menu(): #quick start
-      menu_choice = raw_input("Play Game\nHelp\nQuit\n>>> ")
-      menu_choice = menu_choice.lower()#set characters in menu_choice to all lower case
-      if menu_choice == 'play game':
-            game()#start game function
-      elif menu_choice == 'help':#display help information.
-            print("\nWelcome to Celebrity Dogs!\nThis game was made for the 2019 AQA Computer Science exam task.\nPlease type Play Game to play the game, Help to view this again or Quit to exit.\nAll areas where you need to type are case insensitive.\nWhen playing the game, you will be given instuctions at each section to help you.\nIf you have any queries, please contact jaxk.programmer@gmail.com.\nTo download again or to find the source code on GitHub, go to https://www.jaxk.ga/celeb-dogs.\nThank you for playing Celebrity Dogs!\n")
-            menu()#restart the menu
-      elif menu_choice == 'quit':#If the player wants to quit:
-            print("\nThank you for playing")
-            raw_input("Press RETURN to exit")#when RETURN pressed, end program
-            clear()
-            quit()#Use python built-in to quit
-      else:
-            print("\nError\n")#if neither result is entered, return an error and use the menu function
-            menu()#restart the menu
-def game():#main game
-      #define variables
-      p_cat = ''
-      c_cat = ''
-      p_cat_val = ''
-      c_cat_val = ''
-      winner=''
-      winner = random.choice(['player','player','computer'])
-      possible_cards = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]#define number of cards that can be used
-      while True:#while the player has not picked a valid number of cards, repeat.
-            try:#ask for input
-                  cards_tbp = int(raw_input("\nHow many cards would you like to be played?\nThis includes you and the computer.\nThe number must be above 4, but below 30, and only an even number.\n>>> "))#ask for input and convert it into an integer
-                  print("\nYou have selected to play " +str(cards_tbp) +" cards.\n")#print how many cards are selected
-                  break#if successful, break out of loop
-            except ValueError:#if the number is not valid (e.g float or string, not int), then print on a new line 'That is not a valid number!'
-                  print("\nThat is not a valid number!")
-      selection = raw_input("Is this ok?\n>>>[Y/N] ")#confirm amount of cards
-      selection = selection.lower()#set selection variable to all lower case
-      if selection == 'y':
-            print("\nOk.\n")#continue
-      elif selection == 'n':
-            print("\nOk.\n Returning to selection.\n")
-            game()#choose again
-      else:
-            print("\nError\n")
-            game() #error with selection, choose again
-      if cards_tbp in possible_cards:#if player's selection is valid and in possible_cards:
-            f=open("dogs.txt", "r")#open dogs.txt in read mode
-            if f.mode == 'r': #if opened correctly in read mode, do
-                  contents = f.read() #set contents value to what is in the dogs.txt file
-                  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,ab,ac,ad = contents.split(";")#split contents into separate variables where there is a "', '"
-                  a_exercise,a_intelligence,a_friendliness,a_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)#randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
-                  b_exercise,b_intelligence,b_friendliness,b_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  c_exercise,c_intelligence,c_friendliness,c_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  d_exercise,d_intelligence,d_friendliness,d_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  e_exercise,e_intelligence,e_friendliness,e_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  f_exercise,f_intelligence,f_friendliness,f_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  g_exercise,g_intelligence,g_friendliness,g_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  h_exercise,h_intelligence,h_friendliness,h_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  i_exercise,i_intelligence,i_friendliness,i_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  j_exercise,j_intelligence,j_friendliness,j_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  k_exercise,k_intelligence,k_friendliness,k_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  l_exercise,l_intelligence,l_friendliness,l_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  m_exercise,m_intelligence,m_friendliness,m_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  n_exercise,n_intelligence,n_friendliness,n_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  o_exercise,o_intelligence,o_friendliness,o_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  p_exercise,p_intelligence,p_friendliness,p_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  q_exercise,q_intelligence,q_friendliness,q_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  r_exercise,r_intelligence,r_friendliness,r_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  s_exercise,s_intelligence,s_friendliness,s_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  t_exercise,t_intelligence,t_friendliness,t_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  u_exercise,u_intelligence,u_friendliness,u_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  v_exercise,v_intelligence,v_friendliness,v_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  w_exercise,w_intelligence,w_friendliness,w_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  x_exercise,x_intelligence,x_friendliness,x_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  y_exercise,y_intelligence,y_friendliness,y_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  z_exercise,z_intelligence,z_friendliness,z_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  aa_exercise,aa_intelligence,aa_friendliness,aa_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  ab_exercise,ab_intelligence,ab_friendliness,ab_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  ac_exercise,ac_intelligence,ac_friendliness,ac_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
-                  ad_exercise,ad_intelligence,ad_friendliness,ad_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10)
+#!/usr/bin/env python2
+# Celebrity Dogs game
+# Written in Python 2.7
+
+# Define global variables
+all_cards = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','aa','ab','ac','ad'] # Define the characters assigned to each card
+p_cat = '' # The player's category
+c_cat = '' # The computer's category
+p_cat_val = '' # The value of the player's category
+c_cat_val = '' # The value of the computer's category
+winner="" # The winner of the round
+
+# Import modules
+import random # Used for random intergers
+import time # Used for timed pauses
+
+def clear(): # Function to clear screen
+      for i in range(0,100): # Repeat 100 times
+            print("\n") # Print newlines characters to clear screen of any text
+
+def menu(): # Function to show the main menu
+      menu_choice = raw_input("Play Game\nHelp\nQuit\n>>> ") # Ask for user input
+      menu_choice = menu_choice.lower() # Set characters in menu_choice to all lower case
+      if menu_choice == 'play game': # If the user selected the play game option,
+            game() # Call the game function
+      elif menu_choice == 'help': # Display help information
+            print("\nWelcome to Celebrity Dogs!\nThis game was made for the 2019 AQA Computer Science exam task.\nPlease type Play Game to play the game, Help to view this again or Quit to exit.\nAll areas where you need to type are case insensitive.\nWhen playing the game, you will be given instuctions at each section to help you.\nIf you have any queries, please contact jaxk.programmer@gmail.com.\nTo download again or to find the source code on GitHub, go to https://www.jaxk.ga/celeb-dogs.\nThank you for playing Celebrity Dogs!\n") # Output help information to the screen
+            menu() # Call menu function to restart the menu
+      elif menu_choice == 'quit': # If the player wants to quit:
+            print("\nThank you for playing") # Display message to user
+            raw_input("Press RETURN to exit")# When the user presses RETURN, end program
+            clear() # Call function to clear the screen
+            quit() # Use python built-in function to quit
+      else: # If the user does not enter a valid option,
+            print("\nError\n") # If neither result is entered, return an error
+            menu() # Call the menu function to restart the menu
+
+def game(): # Function for the main game
+      # Define variables
+      p_cat = '' # Variable to store which category the player picked
+      c_cat = '' # Variable to store which category the computer picked
+      p_cat_val = '' # Variable to store the value of the player's card for the selected category
+      c_cat_val = '' # Variable to store the value of the computer's card for the selected category
+      winner='' # Variable to store the winner of the round
+      winner = random.choice(['player','player','computer']) # Pick a random player to start the game. Ratio for chance of being picked -> player:computer=2:1
+      possible_cards = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28] # Define number of cards that can be used
+      while True: # While the player has not picked a valid number of cards, repeat
+            try:
+                  cards_tbp = int(raw_input("\nHow many cards would you like to be played?\nThis includes you and the computer.\nThe number must be above 4, but below 30, and only an even number.\n>>> ")) # Ask for user input and convert it into an integer
+                  print("\nYou have selected to play " +str(cards_tbp) +" cards.\n") # Print how many cards were selected
+                  break # If successful, break out of while loop
+            except ValueError: # If the number is not valid (e.g float or string, not int),
+                  print("\nThat is not a valid number!") # Give an error
+      selection = raw_input("Is this ok?\n>>>[Y/N] ")# Confirm amount of cards is correct
+      selection = selection.lower() # Set selection variable to all lower case
+      if selection == 'y': # If the user selected yes,
+            print("\nOk.\n") # Continue program
+      elif selection == 'n': # If the user selected no,
+            print("\nOk.\n Returning to selection.\n") # Restart selection
+            game() # Call game function to allow user to reselect amount of cards
+      else: # If the user inputted a value that can not be handled,
+            print("\nError\n") # Output an error
+            game() # Call game function to allow user to reselect amount of cards
+      if cards_tbp in possible_cards: # If player's selection is valid and in possible_cards,
+            f=open("dogs.txt", "r") # Open dogs.txt in read mode
+            if f.mode == 'r': # If opened correctly in read mode,
+                  contents = f.read() # Set contents value to what is in the dogs.txt file
+                  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,ab,ac,ad = contents.split(";") # Split contents into separate variables at every ','
+                  a_exercise,a_intelligence,a_friendliness,a_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  b_exercise,b_intelligence,b_friendliness,b_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  c_exercise,c_intelligence,c_friendliness,c_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  d_exercise,d_intelligence,d_friendliness,d_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  e_exercise,e_intelligence,e_friendliness,e_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  f_exercise,f_intelligence,f_friendliness,f_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  g_exercise,g_intelligence,g_friendliness,g_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  h_exercise,h_intelligence,h_friendliness,h_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  i_exercise,i_intelligence,i_friendliness,i_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  j_exercise,j_intelligence,j_friendliness,j_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  k_exercise,k_intelligence,k_friendliness,k_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  l_exercise,l_intelligence,l_friendliness,l_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  m_exercise,m_intelligence,m_friendliness,m_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  n_exercise,n_intelligence,n_friendliness,n_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  o_exercise,o_intelligence,o_friendliness,o_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  p_exercise,p_intelligence,p_friendliness,p_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  q_exercise,q_intelligence,q_friendliness,q_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  r_exercise,r_intelligence,r_friendliness,r_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  s_exercise,s_intelligence,s_friendliness,s_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  t_exercise,t_intelligence,t_friendliness,t_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  u_exercise,u_intelligence,u_friendliness,u_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  v_exercise,v_intelligence,v_friendliness,v_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  w_exercise,w_intelligence,w_friendliness,w_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  x_exercise,x_intelligence,x_friendliness,x_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  y_exercise,y_intelligence,y_friendliness,y_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  z_exercise,z_intelligence,z_friendliness,z_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  aa_exercise,aa_intelligence,aa_friendliness,aa_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  ab_exercise,ab_intelligence,ab_friendliness,ab_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  ac_exercise,ac_intelligence,ac_friendliness,ac_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
+                  ad_exercise,ad_intelligence,ad_friendliness,ad_drool = random.randint(1,5),random.randint(1,100),random.randint(1,10),random.randint(1,10) # Randomly select variables for each card, one variable for exercise, intelligence, friendliness and drool
                   if cards_tbp <= 5: #check if number of cards is valid
                         print("Error! Cards selected is too low or not even. Returning to card selection...\n")
                         game() #return to selection for amount of cards
