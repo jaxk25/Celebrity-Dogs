@@ -822,134 +822,134 @@ def game(): # Function for the main game
                                                 c_cat_val = ad_exercise # Set computer's value to the card's value
                                           else: # If the computer's card is not one of the above,
                                                 print("Error") # Give an error
-                                    elif c_cat == 'Friendliness':
-                                          if computer_cards[len(computer_cards)-1] == 'a':
-                                                c_cat_val = a_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'b':
-                                                c_cat_val = b_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'c':
-                                                c_cat_val = c_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'd':
-                                                c_cat_val = d_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'e':
-                                                c_cat_val = e_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'f':
-                                                c_cat_val = f_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'g':
-                                                c_cat_val = g_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'h':
-                                                c_cat_val = h_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'i':
-                                                c_cat_val = i_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'j':
-                                                c_cat_val = j_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'k':
-                                                c_cat_val = k_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'l':
-                                                c_cat_val = l_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'm':
-                                                c_cat_val = m_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'n':
-                                                c_cat_val = n_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'o':
-                                                c_cat_val = o_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'p':
-                                                c_cat_val = p_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'q':
-                                                c_cat_val = q_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'r':
-                                                c_cat_val = r_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 's':
-                                                c_cat_val = s_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 't':
-                                                c_cat_val = t_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'u':
-                                                c_cat_val = u_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'v':
-                                                c_cat_val = v_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'w':
-                                                c_cat_val = w_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'x':
-                                                c_cat_val = x_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'y':
-                                                c_cat_val = y_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'z':
-                                                c_cat_val = z_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'aa':
-                                                c_cat_val = aa_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'ab':
-                                                c_cat_val = ab_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'ac':
-                                                c_cat_val = ac_friendliness
-                                          elif computer_cards[len(computer_cards)-1] == 'ad':
-                                                c_cat_val = ad_friendliness
-                                          else:
-                                                print("Error")
-                                    elif c_cat == 'Drool':
-                                          if computer_cards[len(computer_cards)-1] == 'a':
-                                                c_cat_val = a_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'b':
-                                                c_cat_val = b_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'c':
-                                                c_cat_val = c_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'd':
-                                                c_cat_val = d_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'e':
-                                                c_cat_val = e_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'f':
-                                                c_cat_val = f_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'g':
-                                                c_cat_val = g_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'h':
-                                                c_cat_val = h_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'i':
-                                                c_cat_val = i_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'j':
-                                                c_cat_val = j_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'k':
-                                                c_cat_val = k_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'l':
-                                                c_cat_val = l_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'm':
-                                                c_cat_val = m_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'n':
-                                                c_cat_val = n_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'o':
-                                                c_cat_val = o_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'p':
-                                                c_cat_val = p_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'q':
-                                                c_cat_val = q_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'r':
-                                                c_cat_val = r_drool
-                                          elif computer_cards[len(computer_cards)-1] == 's':
-                                                c_cat_val = s_drool
-                                          elif computer_cards[len(computer_cards)-1] == 't':
-                                                c_cat_val = t_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'u':
-                                                c_cat_val = u_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'v':
-                                                c_cat_val = v_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'w':
-                                                c_cat_val = w_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'x':
-                                                c_cat_val = x_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'y':
-                                                c_cat_val = y_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'z':
-                                                c_cat_val = z_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'aa':
-                                                c_cat_val = aa_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'ab':
-                                                c_cat_val = ab_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'ac':
-                                                c_cat_val = ac_drool
-                                          elif computer_cards[len(computer_cards)-1] == 'ad':
-                                                c_cat_val = ad_drool
-                                          else:
-                                                print("Error")
-                                    else:
-                                          print("Error!")
+                                    elif c_cat == 'Friendliness': # Set c_cat_val to the correct value for the selected category
+                                          if computer_cards[len(computer_cards)-1] == 'a': # If computer's card is 'a'
+                                                c_cat_val = a_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'b': # If computer's card is 'b'
+                                                c_cat_val = b_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'c': # If computer's card is 'c'
+                                                c_cat_val = c_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'd': # If computer's card is 'd'
+                                                c_cat_val = d_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'e': # If computer's card is 'e'
+                                                c_cat_val = e_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'f': # If computer's card is 'f'
+                                                c_cat_val = f_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'g': # If computer's card is 'g'
+                                                c_cat_val = g_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'h': # If computer's card is 'h'
+                                                c_cat_val = h_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'i': # If computer's card is 'i'
+                                                c_cat_val = i_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'j': # If computer's card is 'j'
+                                                c_cat_val = j_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'k': # If computer's card is 'k'
+                                                c_cat_val = k_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'l': # If computer's card is 'l'
+                                                c_cat_val = l_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'm': # If computer's card is 'm'
+                                                c_cat_val = m_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'n': # If computer's card is 'n'
+                                                c_cat_val = n_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'o': # If computer's card is 'o'
+                                                c_cat_val = o_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'p': # If computer's card is 'p'
+                                                c_cat_val = p_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'q': # If computer's card is 'q'
+                                                c_cat_val = q_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'r': # If computer's card is 'r'
+                                                c_cat_val = r_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 's': # If computer's card is 's'
+                                                c_cat_val = s_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 't': # If computer's card is 't'
+                                                c_cat_val = t_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'u': # If computer's card is 'u'
+                                                c_cat_val = u_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'v': # If computer's card is 'v'
+                                                c_cat_val = v_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'w': # If computer's card is 'w'
+                                                c_cat_val = w_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'x': # If computer's card is 'x'
+                                                c_cat_val = x_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'y': # If computer's card is 'y'
+                                                c_cat_val = y_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'z': # If computer's card is 'z'
+                                                c_cat_val = z_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'aa': # If computer's card is 'aa'
+                                                c_cat_val = aa_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ab': # If computer's card is 'ab'
+                                                c_cat_val = ab_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ac': # If computer's card is 'ac'
+                                                c_cat_val = ac_friendliness # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ad': # If computer's card is 'ad'
+                                                c_cat_val = ad_friendliness # Set computer's value to the card's value
+                                          else: # If the computer's card is not one of the above,
+                                                print("Error") # Give an error
+                                    elif c_cat == 'Drool': # Set c_cat_val to the correct value for the selected category
+                                          if computer_cards[len(computer_cards)-1] == 'a': # If computer's card is 'a'
+                                                c_cat_val = a_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'b': # If computer's card is 'b'
+                                                c_cat_val = b_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'c': # If computer's card is 'c'
+                                                c_cat_val = c_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'd': # If computer's card is 'd'
+                                                c_cat_val = d_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'e': # If computer's card is 'e'
+                                                c_cat_val = e_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'f': # If computer's card is 'f'
+                                                c_cat_val = f_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'g': # If computer's card is 'g'
+                                                c_cat_val = g_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'h': # If computer's card is 'h'
+                                                c_cat_val = h_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'i': # If computer's card is 'i'
+                                                c_cat_val = i_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'j': # If computer's card is 'j'
+                                                c_cat_val = j_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'k': # If computer's card is 'k'
+                                                c_cat_val = k_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'l': # If computer's card is 'l'
+                                                c_cat_val = l_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'm': # If computer's card is 'm'
+                                                c_cat_val = m_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'n': # If computer's card is 'n'
+                                                c_cat_val = n_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'o': # If computer's card is 'o'
+                                                c_cat_val = o_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'p': # If computer's card is 'p'
+                                                c_cat_val = p_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'q': # If computer's card is 'q'
+                                                c_cat_val = q_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'r': # If computer's card is 'r'
+                                                c_cat_val = r_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 's': # If computer's card is 's'
+                                                c_cat_val = s_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 't': # If computer's card is 't'
+                                                c_cat_val = t_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'u': # If computer's card is 'u'
+                                                c_cat_val = u_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'v': # If computer's card is 'v'
+                                                c_cat_val = v_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'w': # If computer's card is 'w'
+                                                c_cat_val = w_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'x': # If computer's card is 'x'
+                                                c_cat_val = x_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'y': # If computer's card is 'y'
+                                                c_cat_val = y_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'z': # If computer's card is 'z'
+                                                c_cat_val = z_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'aa': # If computer's card is 'aa'
+                                                c_cat_val = aa_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ab': # If computer's card is 'ab'
+                                                c_cat_val = ab_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ac': # If computer's card is 'ac'
+                                                c_cat_val = ac_drool # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ad': # If computer's card is 'ad'
+                                                c_cat_val = ad_drool # Set computer's value to the card's value
+                                          else: # If the computer's card is not one of the above,
+                                                print("Error") # Give an error
+                                    else: # If not a recognised category,
+                                          print("Error!") # Give an error
                               if p_cat == 'intelligence': #if p_cat is intelligence, do
                                     if p_cat_val > c_cat_val: #if the value of p_cat_val is bigger than the computer's, do
                                           print("You had a higher score than the computer!\nYou won!")
