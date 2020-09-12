@@ -24,7 +24,7 @@ def menu(): # Function to show the main menu
       if menu_choice == 'play game': # If the user selected the play game option,
             game() # Call the game function
       elif menu_choice == 'help': # Display help information
-            print("\nWelcome to Celebrity Dogs!\nThis game was made for the 2019 AQA Computer Science exam task.\nPlease type Play Game to play the game, Help to view this again or Quit to exit.\nAll areas where you need to type are case insensitive.\nWhen playing the game, you will be given instuctions at each section to help you.\nIf you have any queries, please contact jaxk.programmer@gmail.com.\nTo download again or to find the source code on GitHub, go to https://www.jaxk.ga/celeb-dogs.\nThank you for playing Celebrity Dogs!\n") # Output help information to the screen
+            print("\nWelcome to Celebrity Dogs!\nThis game was made for the 2019 AQA Computer Science exam task.\nPlease type Play Game to play the game, Help to view this again or Quit to exit.\nAll areas where you need to type are case insensitive.\nWhen playing the game, you will be given instuctions at each section to help you.\nIf you have any queries, please contact @jaxk25 on GitHub.\nTo download again or to find the source code on GitHub, go to https://github.com/jaxk25/Celebrity-Dogs/releases.\nThank you for playing Celebrity Dogs!\n") # Output help information to the screen
             menu() # Call menu function to restart the menu
       elif menu_choice == 'quit': # If the player wants to quit:
             print("\nThank you for playing") # Display message to user
@@ -1092,5 +1092,6 @@ def game(): # Function for the main game
               print("Error with selected number of cards. Returning to card selection.") # Give an error
               game() # Call the game function to restart the game
 
-clear() # Call the clear function to clear the screen
-menu() # Call the menu function to show the main menu
+if __name__ == "__main__": # Check if being ran as a standalone program
+      clear() # Call the clear function to clear the screen
+      menu() # Call the menu function to show the main menu
