@@ -395,433 +395,433 @@ def game(): # Function for the main game
                                     print("Friendliness =\t" +str(ad_friendliness)) # Print friendliness
                                     print("Drool =\t" +str(ad_drool)) # Print drool
                               print("") # Print an empty line
-                              p_cat = '' #set the player's category selection to nothing
-                              print("The " +winner +" has been randomly selected to pick first.")
-                              if winner == "player": #if the player won the last round, or if this is the first round, give the player choice over the category
-                                    while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool': #while the player hasn't picked a valid category, loop
-                                          p_cat = raw_input("\nWhat category would you like to use?\n>>> ") #Ask what category the player would like to use
-                                          p_cat = p_cat.lower() #set p_cat to all lower-case
-                                          if p_cat == 'intelligence': # if p_cat is 'intelligence', do
+                              p_cat = '' # Set the player's category selection to nothing
+                              print("The " +winner +" has been randomly selected to pick first.") # Tell the user who was randomly selected to play first
+                              if winner == "player": # If the player won the last round, or is randomly selected to play first,
+                                    while p_cat != 'intelligence' or 'exercise' or 'friendliness' or 'drool': # Wwhile the player hasn't picked a valid category,
+                                          p_cat = raw_input("\nWhat category would you like to use?\n>>> ") # Ask what category the player would like to use
+                                          p_cat = p_cat.lower() # Set p_cat to all lower-case
+                                          if p_cat == 'intelligence': # If p_cat is 'intelligence',
                                                 print("Ok")
-                                                c_cat = 'Intelligence' #set both player's categories to intelligence
-                                                break #break out of the loop
-                                          elif p_cat == 'exercise': #if p_cat is 'exercise', do
+                                                c_cat = 'Intelligence' # Set both player's categories to intelligence
+                                                break # Break out of the loop
+                                          elif p_cat == 'exercise': # If p_cat is 'exercise',
                                                 print("Ok")
-                                                c_cat = 'Excercise' #set both player's categories to exercise
-                                                break #break out of the loop
-                                          elif p_cat == 'friendliness': #if p_cat is 'friendliness', do
+                                                c_cat = 'Excercise' # Set both player's categories to exercise
+                                                break # Break out of the loop
+                                          elif p_cat == 'friendliness': # If p_cat is 'friendliness',
                                                 print("Ok")
-                                                c_cat = 'Friendliness' #set both player's categories to friendliness
-                                                break #break out of the loop
-                                          elif p_cat == 'drool': #if p_cat is 'drool', do
+                                                c_cat = 'Friendliness' # Set both player's categories to friendliness
+                                                break # Break out of the loop
+                                          elif p_cat == 'drool': # If p_cat is 'drool',
                                                 print("Ok")
-                                                c_cat = 'Drool' #set both player's categories to drool
-                                                break #break out of the loop
-                                          elif p_cat == 'overide': #if overide is given, quit this game
+                                                c_cat = 'Drool' # Set both player's categories to drool
+                                                break # Break out of the loop
+                                          elif p_cat == 'overide': # If overide is given,
                                                 print("Ok")
-                                                game() #return to card selection
-                                          else: #if p_cat is none, do, and repeat loop
-                                                print("")#error
-                              elif winner == "computer": #if the computer won the last round, give the computer choice over the category
-                                    all_categories = ['Intelligence', 'Exercise', 'Friendliness', 'Drool'] #define the categories that the computer could pick
-                                    c_cat = random.choice(all_categories) #pick a random category
-                                    if c_cat == 'Intelligence': #set both player's categories to intelligence
+                                                game() # Call game function to restart the game
+                                          else: # If p_cat is not a valid option,
+                                                print("") # Print an empty line
+                              elif winner == "computer": # If the computer won the last round, give the computer choice over the category
+                                    all_categories = ['Intelligence', 'Exercise', 'Friendliness', 'Drool'] # Define the categories that the computer can pick
+                                    c_cat = random.choice(all_categories) # Pick a random category
+                                    if c_cat == 'Intelligence': # Set both player's categories to intelligence
                                           print("\nThe computer chose intelligence.\n")
-                                          p_cat = 'intelligence'
-                                    elif c_cat == 'Exercise': #set both player's categories to exercise
+                                          p_cat = 'intelligence' # Set player's category to 'intelligence'
+                                    elif c_cat == 'Exercise': # Set both player's categories to exercise
                                           print("\nThe computer chose exercise.\n")
-                                          p_cat = 'exercise'
-                                    elif c_cat == 'Friendliness': #set both player's categories to friendliness
+                                          p_cat = 'exercise' # Set player's category to 'exercise'
+                                    elif c_cat == 'Friendliness': # Set both player's categories to friendliness
                                           print("\nThe computer chose friendliness.\n")
-                                          p_cat = 'friendliness'
-                                    elif c_cat == 'Drool': #set both player's categories to drool
+                                          p_cat = 'friendliness' # Set player's category to 'friendliness'
+                                    elif c_cat == 'Drool': # Set both player's categories to drool
                                           print("\nThe computer chose drool.\n")
-                                          p_cat = 'drool'
-                                    else:
-                                          print("Error")
-                              else:
-                                    print("Error")
-                              if True: #always do:
-                                    if p_cat == 'intelligence':#set p_cat_val to the correct value for the selected category
-                                          if player_cards[len(player_cards)-1] == 'a':
-                                                p_cat_val = a_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'b':
-                                                p_cat_val = b_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'c':
-                                                p_cat_val = c_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'd':
-                                                p_cat_val = d_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'e':
-                                                p_cat_val = e_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'f':
-                                                p_cat_val = f_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'g':
-                                                p_cat_val = g_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'h':
-                                                p_cat_val = h_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'i':
-                                                p_cat_val = i_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'j':
-                                                p_cat_val = j_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'k':
-                                                p_cat_val = k_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'l':
-                                                p_cat_val = l_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'm':
-                                                p_cat_val = m_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'n':
-                                                p_cat_val = n_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'o':
-                                                p_cat_val = o_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'p':
-                                                p_cat_val = p_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'q':
-                                                p_cat_val = q_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'r':
-                                                p_cat_val = r_intelligence
-                                          elif player_cards[len(player_cards)-1] == 's':
-                                                p_cat_val = s_intelligence
-                                          elif player_cards[len(player_cards)-1] == 't':
-                                                p_cat_val = t_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'u':
-                                                p_cat_val = u_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'v':
-                                                p_cat_val = v_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'w':
-                                                p_cat_val = w_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'x':
-                                                p_cat_val = x_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'y':
-                                                p_cat_val = y_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'z':
-                                                p_cat_val = z_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'aa':
-                                                p_cat_val = aa_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'ab':
-                                                p_cat_val = ab_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'ac':
-                                                p_cat_val = ac_intelligence
-                                          elif player_cards[len(player_cards)-1] == 'ad':
-                                                p_cat_val = ad_intelligence
-                                          else:
-                                                print("Error")
-                                    elif p_cat == 'exercise':
-                                          if player_cards[len(player_cards)-1] == 'a':
-                                                p_cat_val = a_exercise
-                                          elif player_cards[len(player_cards)-1] == 'b':
-                                                p_cat_val = b_exercise
-                                          elif player_cards[len(player_cards)-1] == 'c':
-                                                p_cat_val = c_exercise
-                                          elif player_cards[len(player_cards)-1] == 'd':
-                                                p_cat_val = d_exercise
-                                          elif player_cards[len(player_cards)-1] == 'e':
-                                                p_cat_val = e_exercise
-                                          elif player_cards[len(player_cards)-1] == 'f':
-                                                p_cat_val = f_exercise
-                                          elif player_cards[len(player_cards)-1] == 'g':
-                                                p_cat_val = g_exercise
-                                          elif player_cards[len(player_cards)-1] == 'h':
-                                                p_cat_val = h_exercise
-                                          elif player_cards[len(player_cards)-1] == 'i':
-                                                p_cat_val = i_exercise
-                                          elif player_cards[len(player_cards)-1] == 'j':
-                                                p_cat_val = j_exercise
-                                          elif player_cards[len(player_cards)-1] == 'k':
-                                                p_cat_val = k_exercise
-                                          elif player_cards[len(player_cards)-1] == 'l':
-                                                p_cat_val = l_exercise
-                                          elif player_cards[len(player_cards)-1] == 'm':
-                                                p_cat_val = m_exercise
-                                          elif player_cards[len(player_cards)-1] == 'n':
-                                                p_cat_val = n_exercise
-                                          elif player_cards[len(player_cards)-1] == 'o':
-                                                p_cat_val = o_exercise
-                                          elif player_cards[len(player_cards)-1] == 'p':
-                                                p_cat_val = p_exercise
-                                          elif player_cards[len(player_cards)-1] == 'q':
-                                                p_cat_val = q_exercise
-                                          elif player_cards[len(player_cards)-1] == 'r':
-                                                p_cat_val = r_exercise
-                                          elif player_cards[len(player_cards)-1] == 's':
-                                                p_cat_val = s_exercise
-                                          elif player_cards[len(player_cards)-1] == 't':
-                                                p_cat_val = t_exercise
-                                          elif player_cards[len(player_cards)-1] == 'u':
-                                                p_cat_val = u_exercise
-                                          elif player_cards[len(player_cards)-1] == 'v':
-                                                p_cat_val = v_exercise
-                                          elif player_cards[len(player_cards)-1] == 'w':
-                                                p_cat_val = w_exercise
-                                          elif player_cards[len(player_cards)-1] == 'x':
-                                                p_cat_val = x_exercise
-                                          elif player_cards[len(player_cards)-1] == 'y':
-                                                p_cat_val = y_exercise
-                                          elif player_cards[len(player_cards)-1] == 'z':
-                                                p_cat_val = z_exercise
-                                          elif player_cards[len(player_cards)-1] == 'aa':
-                                                p_cat_val = aa_exercise
-                                          elif player_cards[len(player_cards)-1] == 'ab':
-                                                p_cat_val = ab_exercise
-                                          elif player_cards[len(player_cards)-1] == 'ac':
-                                                p_cat_val = ac_exercise
-                                          elif player_cards[len(player_cards)-1] == 'ad':
-                                                p_cat_val = ad_exercise
-                                          else:
-                                                print("")#error
-                                    elif p_cat == 'friendliness':
-                                          if player_cards[len(player_cards)-1] == 'a':
-                                                p_cat_val = a_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'b':
-                                                p_cat_val = b_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'c':
-                                                p_cat_val = c_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'd':
-                                                p_cat_val = d_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'e':
-                                                p_cat_val = e_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'f':
-                                                p_cat_val = f_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'g':
-                                                p_cat_val = g_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'h':
-                                                p_cat_val = h_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'i':
-                                                p_cat_val = i_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'j':
-                                                p_cat_val = j_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'k':
-                                                p_cat_val = k_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'l':
-                                                p_cat_val = l_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'm':
-                                                p_cat_val = m_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'n':
-                                                p_cat_val = n_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'o':
-                                                p_cat_val = o_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'p':
-                                                p_cat_val = p_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'q':
-                                                p_cat_val = q_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'r':
-                                                p_cat_val = r_friendliness
-                                          elif player_cards[len(player_cards)-1] == 's':
-                                                p_cat_val = s_friendliness
-                                          elif player_cards[len(player_cards)-1] == 't':
-                                                p_cat_val = t_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'u':
-                                                p_cat_val = u_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'v':
-                                                p_cat_val = v_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'w':
-                                                p_cat_val = w_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'x':
-                                                p_cat_val = x_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'y':
-                                                p_cat_val = y_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'z':
-                                                p_cat_val = z_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'aa':
-                                                p_cat_val = aa_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'ab':
-                                                p_cat_val = ab_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'ac':
-                                                p_cat_val = ac_friendliness
-                                          elif player_cards[len(player_cards)-1] == 'ad':
-                                                p_cat_val = ad_friendliness
-                                          else:
-                                                print("Error")
-                                    elif p_cat == 'drool':
-                                          if player_cards[len(player_cards)-1] == 'a':
-                                                p_cat_val = a_drool
-                                          elif player_cards[len(player_cards)-1] == 'b':
-                                                p_cat_val = b_drool
-                                          elif player_cards[len(player_cards)-1] == 'c':
-                                                p_cat_val = c_drool
-                                          elif player_cards[len(player_cards)-1] == 'd':
-                                                p_cat_val = d_drool
-                                          elif player_cards[len(player_cards)-1] == 'e':
-                                                p_cat_val = e_drool
-                                          elif player_cards[len(player_cards)-1] == 'f':
-                                                p_cat_val = f_drool
-                                          elif player_cards[len(player_cards)-1] == 'g':
-                                                p_cat_val = g_drool
-                                          elif player_cards[len(player_cards)-1] == 'h':
-                                                p_cat_val = h_drool
-                                          elif player_cards[len(player_cards)-1] == 'i':
-                                                p_cat_val = i_drool
-                                          elif player_cards[len(player_cards)-1] == 'j':
-                                                p_cat_val = j_drool
-                                          elif player_cards[len(player_cards)-1] == 'k':
-                                                p_cat_val = k_drool
-                                          elif player_cards[len(player_cards)-1] == 'l':
-                                                p_cat_val = l_drool
-                                          elif player_cards[len(player_cards)-1] == 'm':
-                                                p_cat_val = m_drool
-                                          elif player_cards[len(player_cards)-1] == 'n':
-                                                p_cat_val = n_drool
-                                          elif player_cards[len(player_cards)-1] == 'o':
-                                                p_cat_val = o_drool
-                                          elif player_cards[len(player_cards)-1] == 'p':
-                                                p_cat_val = p_drool
-                                          elif player_cards[len(player_cards)-1] == 'q':
-                                                p_cat_val = q_drool
-                                          elif player_cards[len(player_cards)-1] == 'r':
-                                                p_cat_val = r_drool
-                                          elif player_cards[len(player_cards)-1] == 's':
-                                                p_cat_val = s_drool
-                                          elif player_cards[len(player_cards)-1] == 't':
-                                                p_cat_val = t_drool
-                                          elif player_cards[len(player_cards)-1] == 'u':
-                                                p_cat_val = u_drool
-                                          elif player_cards[len(player_cards)-1] == 'v':
-                                                p_cat_val = v_drool
-                                          elif player_cards[len(player_cards)-1] == 'w':
-                                                p_cat_val = w_drool
-                                          elif player_cards[len(player_cards)-1] == 'x':
-                                                p_cat_val = x_drool
-                                          elif player_cards[len(player_cards)-1] == 'y':
-                                                p_cat_val = y_drool
-                                          elif player_cards[len(player_cards)-1] == 'z':
-                                                p_cat_val = z_drool
-                                          elif player_cards[len(player_cards)-1] == 'aa':
-                                                p_cat_val = aa_drool
-                                          elif player_cards[len(player_cards)-1] == 'ab':
-                                                p_cat_val = ab_drool
-                                          elif player_cards[len(player_cards)-1] == 'ac':
-                                                p_cat_val = ac_drool
-                                          elif player_cards[len(player_cards)-1] == 'ad':
-                                                p_cat_val = ad_drool
-                                          else:
-                                                print("Error")
-                                    else:
-                                          print("Error!")
-                                    if c_cat == "Intelligence":
-                                          if computer_cards[len(computer_cards)-1] == 'a':
-                                                c_cat_val = a_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'b':
-                                                c_cat_val = b_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'c':
-                                                c_cat_val = c_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'd':
-                                                c_cat_val = d_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'e':
-                                                c_cat_val = e_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'f':
-                                                c_cat_val = f_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'g':
-                                                c_cat_val = g_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'h':
-                                                c_cat_val = h_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'i':
-                                                c_cat_val = i_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'j':
-                                                c_cat_val = j_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'k':
-                                                c_cat_val = k_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'l':
-                                                c_cat_val = l_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'm':
-                                                c_cat_val = m_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'n':
-                                                c_cat_val = n_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'o':
-                                                c_cat_val = o_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'p':
-                                                c_cat_val = p_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'q':
-                                                c_cat_val = q_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'r':
-                                                c_cat_val = r_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 's':
-                                                c_cat_val = s_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 't':
-                                                c_cat_val = t_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'u':
-                                                c_cat_val = u_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'v':
-                                                c_cat_val = v_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'w':
-                                                c_cat_val = w_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'x':
-                                                c_cat_val = x_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'y':
-                                                c_cat_val = y_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'z':
-                                                c_cat_val = z_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'aa':
-                                                c_cat_val = aa_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'ab':
-                                                c_cat_val = ab_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'ac':
-                                                c_cat_val = ac_intelligence
-                                          elif computer_cards[len(computer_cards)-1] == 'ad':
-                                                c_cat_val = ad_intelligence
-                                          else:
-                                                print("Error")
-                                    elif c_cat == 'Exercise':
-                                          if computer_cards[len(computer_cards)-1] == 'a':
-                                                c_cat_val = a_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'b':
-                                                c_cat_val = b_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'c':
-                                                c_cat_val = c_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'd':
-                                                c_cat_val = d_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'e':
-                                                c_cat_val = e_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'f':
-                                                c_cat_val = f_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'g':
-                                                c_cat_val = g_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'h':
-                                                c_cat_val = h_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'i':
-                                                c_cat_val = i_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'j':
-                                                c_cat_val = j_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'k':
-                                                c_cat_val = k_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'l':
-                                                c_cat_val = l_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'm':
-                                                c_cat_val = m_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'n':
-                                                c_cat_val = n_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'o':
-                                                c_cat_val = o_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'p':
-                                                c_cat_val = p_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'q':
-                                                c_cat_val = q_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'r':
-                                                c_cat_val = r_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 's':
-                                                c_cat_val = s_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 't':
-                                                c_cat_val = t_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'u':
-                                                c_cat_val = u_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'v':
-                                                c_cat_val = v_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'w':
-                                                c_cat_val = w_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'x':
-                                                c_cat_val = x_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'y':
-                                                c_cat_val = y_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'z':
-                                                c_cat_val = z_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'aa':
-                                                c_cat_val = aa_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'ab':
-                                                c_cat_val = ab_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'ac':
-                                                c_cat_val = ac_exercise
-                                          elif computer_cards[len(computer_cards)-1] == 'ad':
-                                                c_cat_val = ad_exercise
-                                          else:
-                                                print("")
+                                          p_cat = 'drool' # Set player's category to 'drool'
+                                    else: # If the computer selected a category that does not exist,
+                                          print("Error") # Give an error
+                              else: # If the winner is incorrect,
+                                    print("Error") # Give an error
+                              if True: # Always execute,
+                                    if p_cat == 'intelligence': # Set p_cat_val to the correct value for the selected category
+                                          if player_cards[len(player_cards)-1] == 'a': # If player's card is 'a'
+                                                p_cat_val = a_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'b': # If player's card is 'b'
+                                                p_cat_val = b_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'c': # If player's card is 'c'
+                                                p_cat_val = c_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'd': # If player's card is 'd'
+                                                p_cat_val = d_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'e': # If player's card is 'e'
+                                                p_cat_val = e_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'f': # If player's card is 'f'
+                                                p_cat_val = f_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'g': # If player's card is 'g'
+                                                p_cat_val = g_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'h': # If player's card is 'h'
+                                                p_cat_val = h_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'i': # If player's card is 'i'
+                                                p_cat_val = i_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'j': # If player's card is 'j'
+                                                p_cat_val = j_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'k': # If player's card is 'k'
+                                                p_cat_val = k_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'l': # If player's card is 'l'
+                                                p_cat_val = l_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'm': # If player's card is 'm'
+                                                p_cat_val = m_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'n': # If player's card is 'n'
+                                                p_cat_val = n_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'o': # If player's card is 'o'
+                                                p_cat_val = o_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'p': # If player's card is 'p'
+                                                p_cat_val = p_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'q': # If player's card is 'q'
+                                                p_cat_val = q_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'r': # If player's card is 'r'
+                                                p_cat_val = r_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 's': # If player's card is 's'
+                                                p_cat_val = s_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 't': # If player's card is 't'
+                                                p_cat_val = t_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'u': # If player's card is 'u'
+                                                p_cat_val = u_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'v': # If player's card is 'v'
+                                                p_cat_val = v_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'w': # If player's card is 'w'
+                                                p_cat_val = w_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'x': # If player's card is 'x'
+                                                p_cat_val = x_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'y': # If player's card is 'y'
+                                                p_cat_val = y_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'z': # If player's card is 'z'
+                                                p_cat_val = z_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'aa': # If player's card is 'aa'
+                                                p_cat_val = aa_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ab': # If player's card is 'ab'
+                                                p_cat_val = ab_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ac': # If player's card is 'ac'
+                                                p_cat_val = ac_intelligence # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ad': # If player's card is 'ad'
+                                                p_cat_val = ad_intelligence # Set player's value to the card's value
+                                          else: # If the player's card is not one of the above,
+                                                print("Error") # Give an error
+                                    elif p_cat == 'exercise': # Set p_cat_val to the correct value for the selected category
+                                          if player_cards[len(player_cards)-1] == 'a': # If player's card is 'a'
+                                                p_cat_val = a_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'b': # If player's card is 'b'
+                                                p_cat_val = b_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'c': # If player's card is 'c'
+                                                p_cat_val = c_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'd': # If player's card is 'd'
+                                                p_cat_val = d_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'e': # If player's card is 'e'
+                                                p_cat_val = e_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'f': # If player's card is 'f'
+                                                p_cat_val = f_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'g': # If player's card is 'g'
+                                                p_cat_val = g_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'h': # If player's card is 'h'
+                                                p_cat_val = h_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'i': # If player's card is 'i'
+                                                p_cat_val = i_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'j': # If player's card is 'j'
+                                                p_cat_val = j_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'k': # If player's card is 'k'
+                                                p_cat_val = k_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'l': # If player's card is 'l'
+                                                p_cat_val = l_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'm': # If player's card is 'm'
+                                                p_cat_val = m_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'n': # If player's card is 'n'
+                                                p_cat_val = n_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'o': # If player's card is 'o'
+                                                p_cat_val = o_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'p': # If player's card is 'p'
+                                                p_cat_val = p_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'q': # If player's card is 'q'
+                                                p_cat_val = q_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'r': # If player's card is 'r'
+                                                p_cat_val = r_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 's': # If player's card is 's'
+                                                p_cat_val = s_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 't': # If player's card is 't'
+                                                p_cat_val = t_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'u': # If player's card is 'u'
+                                                p_cat_val = u_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'v': # If player's card is 'v'
+                                                p_cat_val = v_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'w': # If player's card is 'w'
+                                                p_cat_val = w_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'x': # If player's card is 'x'
+                                                p_cat_val = x_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'y': # If player's card is 'y'
+                                                p_cat_val = y_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'z': # If player's card is 'z'
+                                                p_cat_val = z_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'aa': # If player's card is 'aa'
+                                                p_cat_val = aa_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ab': # If player's card is 'ab'
+                                                p_cat_val = ab_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ac': # If player's card is 'ac'
+                                                p_cat_val = ac_exercise # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ad': # If player's card is 'ad'
+                                                p_cat_val = ad_exercise # Set player's value to the card's value
+                                          else: # If the player's card is not one of the above,
+                                                print("") # Give an error
+                                    elif p_cat == 'friendliness': # Set p_cat_val to the correct value for the selected category
+                                          if player_cards[len(player_cards)-1] == 'a': # If player's card is 'a'
+                                                p_cat_val = a_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'b': # If player's card is 'b'
+                                                p_cat_val = b_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'c': # If player's card is 'c'
+                                                p_cat_val = c_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'd': # If player's card is 'd'
+                                                p_cat_val = d_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'e': # If player's card is 'e'
+                                                p_cat_val = e_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'f': # If player's card is 'f'
+                                                p_cat_val = f_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'g': # If player's card is 'g'
+                                                p_cat_val = g_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'h': # If player's card is 'h'
+                                                p_cat_val = h_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'i': # If player's card is 'i'
+                                                p_cat_val = i_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'j': # If player's card is 'j'
+                                                p_cat_val = j_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'k': # If player's card is 'k'
+                                                p_cat_val = k_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'l': # If player's card is 'l'
+                                                p_cat_val = l_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'm': # If player's card is 'm'
+                                                p_cat_val = m_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'n': # If player's card is 'n'
+                                                p_cat_val = n_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'o': # If player's card is 'o'
+                                                p_cat_val = o_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'p': # If player's card is 'p'
+                                                p_cat_val = p_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'q': # If player's card is 'q'
+                                                p_cat_val = q_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'r': # If player's card is 'r'
+                                                p_cat_val = r_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 's': # If player's card is 's'
+                                                p_cat_val = s_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 't': # If player's card is 't'
+                                                p_cat_val = t_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'u': # If player's card is 'u'
+                                                p_cat_val = u_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'v': # If player's card is 'v'
+                                                p_cat_val = v_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'w': # If player's card is 'w'
+                                                p_cat_val = w_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'x': # If player's card is 'x'
+                                                p_cat_val = x_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'y': # If player's card is 'y'
+                                                p_cat_val = y_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'z': # If player's card is 'z'
+                                                p_cat_val = z_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'aa': # If player's card is 'aa'
+                                                p_cat_val = aa_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ab': # If player's card is 'ab'
+                                                p_cat_val = ab_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ac': # If player's card is 'ac'
+                                                p_cat_val = ac_friendliness # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ad': # If player's card is 'ad'
+                                                p_cat_val = ad_friendliness # Set player's value to the card's value
+                                          else: # If the player's card is not one of the above,
+                                                print("Error") # Give an error
+                                    elif p_cat == 'drool': # Set p_cat_val to the correct value for the selected category
+                                          if player_cards[len(player_cards)-1] == 'a': # If player's card is 'a'
+                                                p_cat_val = a_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'b': # If player's card is 'b'
+                                                p_cat_val = b_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'c': # If player's card is 'c'
+                                                p_cat_val = c_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'd': # If player's card is 'd'
+                                                p_cat_val = d_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'e': # If player's card is 'e'
+                                                p_cat_val = e_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'f': # If player's card is 'f'
+                                                p_cat_val = f_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'g': # If player's card is 'g'
+                                                p_cat_val = g_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'h': # If player's card is 'h'
+                                                p_cat_val = h_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'i': # If player's card is 'i'
+                                                p_cat_val = i_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'j': # If player's card is 'j'
+                                                p_cat_val = j_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'k': # If player's card is 'k'
+                                                p_cat_val = k_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'l': # If player's card is 'l'
+                                                p_cat_val = l_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'm': # If player's card is 'm'
+                                                p_cat_val = m_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'n': # If player's card is 'n'
+                                                p_cat_val = n_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'o': # If player's card is 'o'
+                                                p_cat_val = o_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'p': # If player's card is 'p'
+                                                p_cat_val = p_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'q': # If player's card is 'q'
+                                                p_cat_val = q_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'r': # If player's card is 'r'
+                                                p_cat_val = r_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 's': # If player's card is 's'
+                                                p_cat_val = s_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 't': # If player's card is 't'
+                                                p_cat_val = t_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'u': # If player's card is 'u'
+                                                p_cat_val = u_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'v': # If player's card is 'v'
+                                                p_cat_val = v_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'w': # If player's card is 'w'
+                                                p_cat_val = w_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'x': # If player's card is 'x'
+                                                p_cat_val = x_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'y': # If player's card is 'y'
+                                                p_cat_val = y_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'z': # If player's card is 'z'
+                                                p_cat_val = z_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'aa': # If player's card is 'aa'
+                                                p_cat_val = aa_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ab': # If player's card is 'ab'
+                                                p_cat_val = ab_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ac': # If player's card is 'ac'
+                                                p_cat_val = ac_drool # Set player's value to the card's value
+                                          elif player_cards[len(player_cards)-1] == 'ad': # If player's card is 'ad'
+                                                p_cat_val = ad_drool # Set player's value to the card's value
+                                          else: # If the player's card is not one of the above,
+                                                print("Error") # Give an error
+                                    else: # If not a recognised category,
+                                          print("Error!") # Give an error
+                                    if c_cat == "Intelligence": # Set c_cat_val to the correct value for the selected category
+                                          if computer_cards[len(computer_cards)-1] == 'a': # If computer's card is 'a'
+                                                c_cat_val = a_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'b': # If computer's card is 'b'
+                                                c_cat_val = b_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'c': # If computer's card is 'c'
+                                                c_cat_val = c_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'd': # If computer's card is 'd'
+                                                c_cat_val = d_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'e': # If computer's card is 'e'
+                                                c_cat_val = e_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'f': # If computer's card is 'f'
+                                                c_cat_val = f_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'g': # If computer's card is 'g'
+                                                c_cat_val = g_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'h': # If computer's card is 'h'
+                                                c_cat_val = h_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'i': # If computer's card is 'i'
+                                                c_cat_val = i_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'j': # If computer's card is 'j'
+                                                c_cat_val = j_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'k': # If computer's card is 'k'
+                                                c_cat_val = k_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'l': # If computer's card is 'l'
+                                                c_cat_val = l_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'm': # If computer's card is 'm'
+                                                c_cat_val = m_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'n': # If computer's card is 'n'
+                                                c_cat_val = n_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'o': # If computer's card is 'o'
+                                                c_cat_val = o_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'p': # If computer's card is 'p'
+                                                c_cat_val = p_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'q': # If computer's card is 'q'
+                                                c_cat_val = q_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'r': # If computer's card is 'r'
+                                                c_cat_val = r_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 's': # If computer's card is 's'
+                                                c_cat_val = s_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 't': # If computer's card is 't'
+                                                c_cat_val = t_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'u': # If computer's card is 'u'
+                                                c_cat_val = u_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'v': # If computer's card is 'v'
+                                                c_cat_val = v_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'w': # If computer's card is 'w'
+                                                c_cat_val = w_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'x': # If computer's card is 'x'
+                                                c_cat_val = x_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'y': # If computer's card is 'y'
+                                                c_cat_val = y_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'z': # If computer's card is 'z'
+                                                c_cat_val = z_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'aa': # If computer's card is 'aa'
+                                                c_cat_val = aa_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ab': # If computer's card is 'ab'
+                                                c_cat_val = ab_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ac': # If computer's card is 'ac'
+                                                c_cat_val = ac_intelligence # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ad': # If computer's card is 'ad'
+                                                c_cat_val = ad_intelligence # Set computer's value to the card's value
+                                          else: # If the computer's card is not one of the above,
+                                                print("Error") # Give an error
+                                    elif c_cat == 'Exercise': # Set c_cat_val to the correct value for the selected category
+                                          if computer_cards[len(computer_cards)-1] == 'a': # If computer's card is 'a'
+                                                c_cat_val = a_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'b': # If computer's card is 'b'
+                                                c_cat_val = b_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'c': # If computer's card is 'c'
+                                                c_cat_val = c_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'd': # If computer's card is 'd'
+                                                c_cat_val = d_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'e': # If computer's card is 'e'
+                                                c_cat_val = e_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'f': # If computer's card is 'f'
+                                                c_cat_val = f_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'g': # If computer's card is 'g'
+                                                c_cat_val = g_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'h': # If computer's card is 'h'
+                                                c_cat_val = h_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'i': # If computer's card is 'i'
+                                                c_cat_val = i_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'j': # If computer's card is 'j'
+                                                c_cat_val = j_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'k': # If computer's card is 'k'
+                                                c_cat_val = k_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'l': # If computer's card is 'l'
+                                                c_cat_val = l_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'm': # If computer's card is 'm'
+                                                c_cat_val = m_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'n': # If computer's card is 'n'
+                                                c_cat_val = n_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'o': # If computer's card is 'o'
+                                                c_cat_val = o_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'p': # If computer's card is 'p'
+                                                c_cat_val = p_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'q': # If computer's card is 'q'
+                                                c_cat_val = q_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'r': # If computer's card is 'r'
+                                                c_cat_val = r_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 's': # If computer's card is 's'
+                                                c_cat_val = s_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 't': # If computer's card is 't'
+                                                c_cat_val = t_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'u': # If computer's card is 'u'
+                                                c_cat_val = u_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'v': # If computer's card is 'v'
+                                                c_cat_val = v_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'w': # If computer's card is 'w'
+                                                c_cat_val = w_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'x': # If computer's card is 'x'
+                                                c_cat_val = x_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'y': # If computer's card is 'y'
+                                                c_cat_val = y_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'z': # If computer's card is 'z'
+                                                c_cat_val = z_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'aa': # If computer's card is 'aa'
+                                                c_cat_val = aa_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ab': # If computer's card is 'ab'
+                                                c_cat_val = ab_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ac': # If computer's card is 'ac'
+                                                c_cat_val = ac_exercise # Set computer's value to the card's value
+                                          elif computer_cards[len(computer_cards)-1] == 'ad': # If computer's card is 'ad'
+                                                c_cat_val = ad_exercise # Set computer's value to the card's value
+                                          else: # If the computer's card is not one of the above,
+                                                print("Error") # Give an error
                                     elif c_cat == 'Friendliness':
                                           if computer_cards[len(computer_cards)-1] == 'a':
                                                 c_cat_val = a_friendliness
