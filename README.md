@@ -1,4 +1,5 @@
 # Celebrity Dogs
+# YES I HAVE HEARD NOW HEARD OF ITERATION BUT THIS WAS MADE WHEN I DIDN'T KNOW WHAT IT WAS
 Python Game based on the AQA GCSE Computer Science 2019 Exam Task.  
 To run, make sure you have Python 2.  
 ## To run
